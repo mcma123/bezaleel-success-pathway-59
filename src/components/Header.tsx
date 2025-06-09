@@ -1,18 +1,31 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+} from '@/components/ui/dropdown-menu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
+  ];
+
+  const servicesByCountry = [
+    { name: 'South Africa', href: '/services/south-africa' },
+    { name: 'Zambia', href: '/services/zambia' },
+    { name: 'Zimbabwe', href: '/services/zimbabwe' },
   ];
 
   return (
@@ -41,6 +54,37 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center text-foreground hover:text-bezaleel-red transition-colors duration-200 font-medium">
+                  Services
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-white border border-gray-200 shadow-lg">
+                <DropdownMenuItem asChild>
+                  <Link 
+                    to="/services" 
+                    className="w-full text-foreground hover:text-bezaleel-red transition-colors duration-200"
+                  >
+                    All Services
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                {servicesByCountry.map((country) => (
+                  <DropdownMenuItem key={country.name} asChild>
+                    <Link 
+                      to={country.href} 
+                      className="w-full text-foreground hover:text-bezaleel-red transition-colors duration-200"
+                    >
+                      {country.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* CTA Button */}
@@ -74,6 +118,28 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Services Menu */}
+              <div className="py-2">
+                <Link
+                  to="/services"
+                  className="text-foreground hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  All Services
+                </Link>
+                {servicesByCountry.map((country) => (
+                  <Link
+                    key={country.name}
+                    to={country.href}
+                    className="text-foreground hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2 pl-4"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {country.name}
+                  </Link>
+                ))}
+              </div>
+              
               <Button className="bezaleel-gradient text-white mt-4 ripple-effect">
                 Get Started
               </Button>
