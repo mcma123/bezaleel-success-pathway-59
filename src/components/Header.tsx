@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -25,7 +24,6 @@ const Header = () => {
   const servicesByCountry = [
     { name: 'South Africa', href: '/services/south-africa' },
     { name: 'Zambia', href: '/services/zambia' },
-    { name: 'Zimbabwe', href: '/services/zimbabwe' },
   ];
 
   return (

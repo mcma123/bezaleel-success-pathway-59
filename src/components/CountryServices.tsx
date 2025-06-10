@@ -31,20 +31,6 @@ const CountryServices = () => {
         "Environmental Compliance"
       ],
       specialties: ["Mining Sector", "Agriculture", "Tourism"]
-    },
-    {
-      name: "Zimbabwe",
-      flag: "🇿🇼",
-      color: "bg-purple-50 border-purple-200",
-      services: [
-        "Companies Registry Setup",
-        "ZIMRA Registration",
-        "Investment License Processing",
-        "Export/Import Permits",
-        "Indigenous Business Support",
-        "Special Economic Zones"
-      ],
-      specialties: ["Agriculture", "Manufacturing", "Technology"]
     }
   ];
 
@@ -64,8 +50,8 @@ const CountryServices = () => {
           </p>
         </div>
 
-        {/* Countries Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Countries Grid - Updated to use 2 columns for better layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {countries.map((country, index) => (
             <Card 
               key={country.name} 
