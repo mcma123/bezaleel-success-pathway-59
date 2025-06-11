@@ -45,11 +45,11 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-bezaleel-gray via-white to-bezaleel-red/5">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-muted via-background to-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-4 bg-bezaleel-accent/10 text-bezaleel-accent hover:bg-bezaleel-accent hover:text-white">
@@ -67,7 +67,7 @@ const About = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -103,7 +103,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-to-br from-bezaleel-gray/30 to-white">
+      <section className="py-20 bg-gradient-to-br from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
@@ -116,7 +116,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="hover-lift border-2 border-transparent hover:border-bezaleel-red/20 transition-all duration-300">
+              <Card key={index} className="hover-lift border-2 border-transparent hover:border-bezaleel-red/20 transition-all duration-300 bg-card">
                 <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-bezaleel-red/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-bezaleel-red transition-colors duration-300">
                     <div className="text-bezaleel-red group-hover:text-white transition-colors duration-300">
@@ -137,13 +137,13 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <Card key={index} className="hover-lift transition-all duration-300 overflow-hidden">
+              <Card key={index} className="hover-lift transition-all duration-300 overflow-hidden bg-card">
                 <CardHeader className="text-center p-0">
                   <div className="w-full h-64 overflow-hidden">
                     <img 

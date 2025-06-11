@@ -1,3 +1,4 @@
+
 import Header from '@/components/Header';
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import ServicesOverview from '@/components/ServicesOverview';
@@ -8,7 +9,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Header />
       <main>
         <BackgroundPaths title="Background Paths" />

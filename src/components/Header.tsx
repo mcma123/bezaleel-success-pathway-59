@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,7 +28,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-colors duration-300">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -61,11 +62,11 @@ const Header = () => {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 bg-white border border-gray-200 shadow-lg">
+              <DropdownMenuContent className="w-56 bg-popover border border-border shadow-lg">
                 <DropdownMenuItem asChild>
                   <Link 
                     to="/services" 
-                    className="w-full text-foreground hover:text-bezaleel-red transition-colors duration-200"
+                    className="w-full text-popover-foreground hover:text-bezaleel-red transition-colors duration-200"
                   >
                     All Services
                   </Link>
@@ -75,7 +76,7 @@ const Header = () => {
                   <DropdownMenuItem key={country.name} asChild>
                     <Link 
                       to={country.href} 
-                      className="w-full text-foreground hover:text-bezaleel-red transition-colors duration-200"
+                      className="w-full text-popover-foreground hover:text-bezaleel-red transition-colors duration-200"
                     >
                       {country.name}
                     </Link>
@@ -85,8 +86,9 @@ const Header = () => {
             </DropdownMenu>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Theme Toggle and CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <Button className="bezaleel-gradient text-white ripple-effect">
               Get Started
             </Button>
@@ -104,7 +106,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-gray-200 animate-fade-in-up">
+          <div className="md:hidden mt-4 py-4 border-t border-border animate-fade-in-up">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
@@ -137,10 +139,14 @@ const Header = () => {
                   </Link>
                 ))}
               </div>
-              
-              <Button className="bezaleel-gradient text-white mt-4 ripple-effect">
-                Get Started
-              </Button>
+
+              {/* Mobile Theme Toggle and CTA */}
+              <div className="flex items-center justify-between pt-4">
+                <ThemeToggle />
+                <Button className="bezaleel-gradient text-white ripple-effect">
+                  Get Started
+                </Button>
+              </div>
             </nav>
           </div>
         )}
