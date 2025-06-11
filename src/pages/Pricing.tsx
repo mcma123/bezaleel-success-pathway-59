@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Check, Star, Settings, Users, Globe, Zap, Shield, Code, Database, Smartphone } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 
 const Pricing = () => {
   const plans = [
@@ -64,32 +64,32 @@ const Pricing = () => {
 
   const customServices = [
     {
-      icon: <Code className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
       title: "Custom CRM",
       description: "Tailored customer relationship management systems"
     },
     {
-      icon: <Users className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
       title: "HR Solutions",
       description: "Complete human resources management platforms"
     },
     {
-      icon: <Database className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
       title: "Accounting Systems",
       description: "Advanced financial management and reporting tools"
     },
     {
-      icon: <Settings className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
       title: "LMS Platforms",
       description: "Learning management systems for education"
     },
     {
-      icon: <Globe className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
       title: "Project Management",
       description: "Comprehensive project tracking and collaboration tools"
     },
     {
-      icon: <Smartphone className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
       title: "AI Chatbots",
       description: "Intelligent automation and customer support bots"
     }
@@ -195,48 +195,54 @@ const Pricing = () => {
       </section>
 
       {/* Custom Solutions Section */}
-      <section className="py-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent text-white">
+      <section className="py-20 bg-white border-t border-gray-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-white/20 text-white hover:bg-white hover:text-bezaleel-red">
+            <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red hover:bg-bezaleel-red hover:text-white">
               On Scope
             </Badge>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-bezaleel-dark mb-6">
               Custom Solutions
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We offer tailored solutions for businesses with unique requirements. From enterprise-grade systems to specialized applications.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {customServices.map((service, index) => (
-              <Card key={index} className="bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300 hover-lift">
-                <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-3 bg-white/20 rounded-full w-fit">
-                    {service.icon}
+              <Card key={index} className="border border-gray-200 hover:border-bezaleel-red/30 hover:shadow-lg transition-all duration-300 hover-lift overflow-hidden">
+                <CardHeader className="text-center p-0">
+                  <div className="w-full h-48 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <CardTitle className="text-white text-lg mb-2">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-white/80">
-                    {service.description}
-                  </CardDescription>
+                  <div className="p-6">
+                    <CardTitle className="text-bezaleel-dark text-lg mb-2">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-muted-foreground">
+                      {service.description}
+                    </CardDescription>
+                  </div>
                 </CardHeader>
               </Card>
             ))}
           </div>
 
           <div className="text-center">
-            <Card className="max-w-2xl mx-auto bg-white/10 border-white/20">
+            <Card className="max-w-2xl mx-auto border-2 border-bezaleel-red/20 bg-gradient-to-r from-bezaleel-gray/50 to-white">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-2xl font-bold text-bezaleel-dark mb-4">
                   Need Something Unique?
                 </h3>
-                <p className="text-white/90 mb-6">
+                <p className="text-muted-foreground mb-6">
                   Contact us for a personalized quote on custom development projects, enterprise solutions, and specialized business systems.
                 </p>
-                <Button size="lg" className="bg-white text-bezaleel-red hover:bg-gray-100 font-semibold px-8 py-3">
+                <Button size="lg" className="bezaleel-gradient text-white font-semibold px-8 py-3 hover:scale-105 transition-transform duration-300">
                   Get Custom Quote
                 </Button>
               </CardContent>
