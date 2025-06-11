@@ -12,6 +12,7 @@ import Ecommerce from "./pages/services/Ecommerce";
 import MobileDevelopment from "./pages/services/MobileDevelopment";
 import DigitalMarketing from "./pages/services/DigitalMarketing";
 import SouthAfrica from "./pages/services/SouthAfrica";
+import Zambia from "./pages/services/Zambia";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/services/mobile-development" element={<MobileDevelopment />} />
           <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/services/south-africa" element={<SouthAfrica />} />
+          <Route path="/services/zambia" element={<Zambia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
