@@ -1,6 +1,5 @@
-
 import Header from '@/components/Header';
-import Hero from '@/components/Hero';
+import { BackgroundPaths } from "@/components/ui/background-paths";
 import ServicesOverview from '@/components/ServicesOverview';
 import CountryServices from '@/components/CountryServices';
 import PricingPlans from '@/components/PricingPlans';
@@ -12,7 +11,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <Hero />
+        <BackgroundPaths title="Background Paths" />
         <ServicesOverview />
         <CountryServices />
         <Gallery />

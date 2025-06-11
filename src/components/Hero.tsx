@@ -1,8 +1,43 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
+import { useEffect, useState } from 'react';
+
+const TYPING_WORDS = ["Business Success", "Digital Transformation"];
+const TYPING_SPEED = 80; // ms per character
+const ERASING_SPEED = 40; // ms per character
+const DELAY_BETWEEN_WORDS = 1200; // ms to wait before erasing/typing next
 
 const Hero = () => {
+  const [displayed, setDisplayed] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [typing, setTyping] = useState(true);
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+    const currentWord = TYPING_WORDS[wordIndex];
+    if (typing) {
+      if (displayed.length < currentWord.length) {
+        timeout = setTimeout(() => {
+          setDisplayed(currentWord.slice(0, displayed.length + 1));
+        }, TYPING_SPEED);
+      } else {
+        timeout = setTimeout(() => setTyping(false), DELAY_BETWEEN_WORDS);
+      }
+    } else {
+      if (displayed.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayed(currentWord.slice(0, displayed.length - 1));
+        }, ERASING_SPEED);
+      } else {
+        timeout = setTimeout(() => {
+          setWordIndex((wordIndex + 1) % TYPING_WORDS.length);
+          setTyping(true);
+        }, 400);
+      }
+    }
+    return () => clearTimeout(timeout);
+  }, [displayed, typing, wordIndex]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-bezaleel-gray via-white to-bezaleel-gray/50 overflow-hidden">
       {/* Background Pattern */}
@@ -24,8 +59,8 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-bezaleel-dark mb-6 animate-fade-in-up">
             Your Gateway to{' '}
             <span className="bg-gradient-to-r from-bezaleel-red to-bezaleel-accent bg-clip-text text-transparent">
-              Business Success
-            </span>{' '}
+              {displayed}&nbsp;
+            </span>
             Across Africa
           </h1>
 
