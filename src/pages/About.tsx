@@ -8,30 +8,7 @@ import { Users, Target, Award, Globe, Heart, Lightbulb } from 'lucide-react';
 
 const About = () => {
   const teamMembers = [
-    {
-      name: "David Malama",
-      role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      description: "Visionary leader with 15+ years of experience in business development and technology innovation across Africa."
-    },
-    {
-      name: "Sarah Mwanza",
-      role: "CTO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b589?w=300&h=300&fit=crop&crop=face",
-      description: "Technology expert specializing in custom software development and digital transformation solutions."
-    },
-    {
-      name: "Michael Banda",
-      role: "Head of Operations",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-      description: "Operations specialist ensuring seamless business registration and compliance services across multiple countries."
-    },
-    {
-      name: "Grace Tembo",
-      role: "Legal Advisor",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
-      description: "Legal expert with deep knowledge of business law and regulatory compliance in African markets."
-    }
+    
   ];
 
   const values = [
@@ -162,14 +139,7 @@ const About = () => {
       {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The passionate professionals behind Bezaleel Consultants, dedicated to your business success.
-            </p>
-          </div>
+          
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
