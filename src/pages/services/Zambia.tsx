@@ -16,7 +16,7 @@ const Zambia = () => {
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: "Young Population",
+      title: "Young Population", 
       description: "19+ million people with median age of 16.8 years",
       color: "bg-blue-50 border-blue-200 text-blue-700"
     },
@@ -95,7 +95,7 @@ const Zambia = () => {
       image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800"
     },
     {
-      step: "2", 
+      step: "2",
       title: "Company Name Reservation",
       description: "Reserve your company name with PACRA and ensure compliance with Zambian naming requirements.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800"
@@ -120,7 +120,7 @@ const Zambia = () => {
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-emerald-50 via-white to-blue-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300D4AA" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%2300D4AA\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"4\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         <div className="container mx-auto px-4 relative">
           <div className="text-center max-w-5xl mx-auto">
             <div className="flex items-center justify-center mb-6">
