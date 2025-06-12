@@ -71,7 +71,7 @@ const PricingPlans = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-bezaleel-dark mb-6">
             Choose Your Business Package
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From basic company registration to full e-commerce solutions, we have the right package for your business needs.
           </p>
         </div>
@@ -98,14 +98,14 @@ const PricingPlans = () => {
                 <CardTitle className="text-2xl font-bold text-bezaleel-dark mb-2">
                   {plan.name}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground mb-4">
+                <CardDescription className="text-gray-600 mb-4">
                   {plan.description}
                 </CardDescription>
                 <div className="mb-4">
                   <span className="text-4xl md:text-5xl font-bold text-bezaleel-red">
                     {plan.price}
                   </span>
-                  <span className="text-muted-foreground ml-2">USD</span>
+                  <span className="text-gray-600 ml-2">USD</span>
                 </div>
               </CardHeader>
 
@@ -117,7 +117,7 @@ const PricingPlans = () => {
                       <div className="flex-shrink-0 w-5 h-5 bg-bezaleel-red/10 rounded-full flex items-center justify-center mr-3">
                         <Check className="w-3 h-3 text-bezaleel-red" />
                       </div>
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <span className="text-sm text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -136,21 +136,6 @@ const PricingPlans = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Money Back Guarantee */}
-        <div className="text-center mt-16">
-          <Card className="max-w-2xl mx-auto bg-gradient-to-r from-bezaleel-gray/50 to-white border-2 border-bezaleel-red/20">
-            <CardContent className="p-8">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-bold text-bezaleel-dark mb-2">
-                30-Day Money Back Guarantee
-              </h3>
-              <p className="text-muted-foreground">
-                Not satisfied with our service? Get a full refund within 30 days, no questions asked.
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

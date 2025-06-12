@@ -1,8 +1,8 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,7 +28,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-colors duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -38,7 +38,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-bezaleel-dark">Bezaleel</h1>
-              <p className="text-sm text-muted-foreground">Consultants</p>
+              <p className="text-sm text-gray-600">Consultants</p>
             </div>
           </Link>
 
@@ -48,7 +48,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-foreground hover:text-bezaleel-red transition-colors duration-200 font-medium"
+                className="text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium"
               >
                 {item.name}
               </Link>
@@ -57,16 +57,16 @@ const Header = () => {
             {/* Services Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="flex items-center text-foreground hover:text-bezaleel-red transition-colors duration-200 font-medium">
+                <button className="flex items-center text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium">
                   Services
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 bg-popover border border-border shadow-lg">
+              <DropdownMenuContent className="w-56 bg-white border border-gray-200 shadow-lg">
                 <DropdownMenuItem asChild>
                   <Link 
                     to="/services" 
-                    className="w-full text-popover-foreground hover:text-bezaleel-red transition-colors duration-200"
+                    className="w-full text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200"
                   >
                     All Services
                   </Link>
@@ -76,7 +76,7 @@ const Header = () => {
                   <DropdownMenuItem key={country.name} asChild>
                     <Link 
                       to={country.href} 
-                      className="w-full text-popover-foreground hover:text-bezaleel-red transition-colors duration-200"
+                      className="w-full text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200"
                     >
                       {country.name}
                     </Link>
@@ -86,9 +86,8 @@ const Header = () => {
             </DropdownMenu>
           </nav>
 
-          {/* Theme Toggle and CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
             <Button className="bezaleel-gradient text-white ripple-effect">
               Get Started
             </Button>
@@ -106,13 +105,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-border animate-fade-in-up">
+          <div className="md:hidden mt-4 py-4 border-t border-gray-200 animate-fade-in-up">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-foreground hover:text-bezaleel-red transition-colors duration-200 font-medium py-2"
+                  className="text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -123,7 +122,7 @@ const Header = () => {
               <div className="py-2">
                 <Link
                   to="/services"
-                  className="text-foreground hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2"
+                  className="text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   All Services
@@ -132,7 +131,7 @@ const Header = () => {
                   <Link
                     key={country.name}
                     to={country.href}
-                    className="text-foreground hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2 pl-4"
+                    className="text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2 pl-4"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {country.name}
@@ -140,10 +139,9 @@ const Header = () => {
                 ))}
               </div>
 
-              {/* Mobile Theme Toggle and CTA */}
-              <div className="flex items-center justify-between pt-4">
-                <ThemeToggle />
-                <Button className="bezaleel-gradient text-white ripple-effect">
+              {/* Mobile CTA */}
+              <div className="pt-4">
+                <Button className="bezaleel-gradient text-white ripple-effect w-full">
                   Get Started
                 </Button>
               </div>

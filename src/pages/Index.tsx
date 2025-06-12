@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+    <div className="min-h-screen bg-white text-bezaleel-dark">
       <Header />
       <main>
         <BackgroundPaths title="Background Paths" />

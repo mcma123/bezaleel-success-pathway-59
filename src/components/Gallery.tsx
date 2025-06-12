@@ -1,9 +1,12 @@
 
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Play } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const Gallery = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
   const portfolioItems = [
     {
       type: "website",
@@ -30,8 +33,7 @@ const Gallery = () => {
       image: "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=600&h=400&fit=crop",
       category: "Management System",
       technologies: ["Vue.js", "Node.js", "PostgreSQL"],
-      url: "#",
-      isVideo: true
+      url: "#"
     },
     {
       type: "website",
@@ -49,8 +51,7 @@ const Gallery = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       category: "CRM System",
       technologies: ["Angular", "Spring Boot", "Oracle"],
-      url: "#",
-      isVideo: true
+      url: "#"
     },
     {
       type: "website",
@@ -77,15 +78,18 @@ const Gallery = () => {
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
       category: "Finance",
       technologies: ["Python", "Django", "PostgreSQL"],
-      url: "#",
-      isVideo: true
+      url: "#"
     }
   ];
 
   const categories = ["All", "E-Commerce", "Corporate", "Management System", "Food & Beverage", "CRM System", "Healthcare", "Education", "Finance"];
 
+  const filteredItems = activeCategory === "All" 
+    ? portfolioItems 
+    : portfolioItems.filter(item => item.category === activeCategory);
+
   return (
-    <section className="py-20 bg-bezaleel-gray/30">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -95,22 +99,23 @@ const Gallery = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-bezaleel-dark mb-6">
             Websites & Systems We've Built
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore our diverse portfolio of websites and business systems that have helped companies across Africa achieve digital success.
           </p>
         </div>
 
         {/* Category Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <Badge 
               key={category}
-              variant={index === 0 ? "default" : "outline"}
+              variant={activeCategory === category ? "default" : "outline"}
               className={`px-4 py-2 cursor-pointer transition-all duration-300 hover:scale-105 ${
-                index === 0 
+                activeCategory === category 
                   ? 'bg-bezaleel-red text-white' 
                   : 'text-bezaleel-red border-bezaleel-red hover:bg-bezaleel-red hover:text-white'
               }`}
+              onClick={() => setActiveCategory(category)}
             >
               {category}
             </Badge>
@@ -119,7 +124,7 @@ const Gallery = () => {
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {portfolioItems.map((item, index) => (
+          {filteredItems.map((item, index) => (
             <Card 
               key={item.title}
               className="group hover-lift border-2 border-transparent hover:border-bezaleel-red/20 overflow-hidden transition-all duration-300"
@@ -133,35 +138,21 @@ const Gallery = () => {
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex gap-2">
-                    {item.isVideo && (
-                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer">
-                        <Play className="w-5 h-5 text-white" />
-                      </div>
-                    )}
-                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer">
-                      <ExternalLink className="w-5 h-5 text-white" />
-                    </div>
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer">
+                    <ExternalLink className="w-5 h-5 text-white" />
                   </div>
                 </div>
                 {/* Category Badge */}
                 <Badge className="absolute top-3 left-3 bg-bezaleel-red text-white">
                   {item.category}
                 </Badge>
-                {/* Type Badge */}
-                {item.isVideo && (
-                  <Badge className="absolute top-3 right-3 bg-bezaleel-accent text-white">
-                    <Play className="w-3 h-3 mr-1" />
-                    Demo
-                  </Badge>
-                )}
               </div>
               
               <CardContent className="p-4">
                 <h3 className="font-bold text-bezaleel-dark mb-2 group-hover:text-bezaleel-red transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-3">
+                <p className="text-sm text-gray-600 mb-3">
                   {item.description}
                 </p>
                 
@@ -171,7 +162,7 @@ const Gallery = () => {
                     <Badge 
                       key={techIndex}
                       variant="secondary" 
-                      className="text-xs bg-bezaleel-gray text-bezaleel-dark"
+                      className="text-xs bg-gray-200 text-bezaleel-dark"
                     >
                       {tech}
                     </Badge>
