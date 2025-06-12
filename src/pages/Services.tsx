@@ -24,6 +24,7 @@ const Services = () => {
       id: 'business-registration',
       title: 'Business Registration & Compliance',
       description: 'Complete business setup and legal compliance across African markets',
+      hasBusinessServices: true,
       services: [
         {
           title: 'Company Registration',
@@ -52,6 +53,7 @@ const Services = () => {
       id: 'banking-finance',
       title: 'Banking & Financial Services',
       description: 'Corporate banking solutions and financial planning',
+      hasBusinessServices: true,
       services: [
         {
           title: 'Corporate Banking',
@@ -116,6 +118,7 @@ const Services = () => {
       id: 'business-support',
       title: 'Business Support Services',
       description: 'Ongoing support for business operations and growth',
+      hasBusinessServices: true,
       services: [
         {
           title: 'Virtual Office',
@@ -218,6 +221,12 @@ const Services = () => {
                               </ul>
                               {service.hasSubpage ? (
                                 <Link to={service.link || '#'}>
+                                  <Button className="w-full bezaleel-gradient text-white ripple-effect">
+                                    Learn More
+                                  </Button>
+                                </Link>
+                              ) : category.hasBusinessServices ? (
+                                <Link to="/services/business-services">
                                   <Button className="w-full bezaleel-gradient text-white ripple-effect">
                                     Learn More
                                   </Button>
