@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -176,7 +175,7 @@ const Ecommerce = () => {
             <Card className="hover-lift">
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-bold text-bezaleel-dark">Starter</CardTitle>
-                <div className="text-3xl font-bold text-bezaleel-red mt-4">$2,500</div>
+                <div className="text-3xl font-bold text-bezaleel-red mt-4">$500</div>
                 <CardDescription>Perfect for small businesses</CardDescription>
               </CardHeader>
               <CardContent>
@@ -247,7 +246,7 @@ const Ecommerce = () => {
             <Card className="hover-lift">
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-bold text-bezaleel-dark">Enterprise</CardTitle>
-                <div className="text-3xl font-bold text-bezaleel-red mt-4">$10,000+</div>
+                <div className="text-3xl font-bold text-bezaleel-red mt-4">get quote</div>
                 <CardDescription>For large-scale operations</CardDescription>
               </CardHeader>
               <CardContent>
@@ -258,11 +257,11 @@ const Ecommerce = () => {
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-bezaleel-red rounded-full mr-3"></div>
-                    Custom integrations
+                    Payment integrations
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-bezaleel-red rounded-full mr-3"></div>
-                    Multi-vendor support
+                    online vendor support
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-bezaleel-red rounded-full mr-3"></div>
@@ -273,9 +272,11 @@ const Ecommerce = () => {
                     Custom features
                   </li>
                 </ul>
-                <Button className="w-full mt-6 bezaleel-gradient text-white">
-                  Contact Us
-                </Button>
+                <a href="https://wa.me/27697906374" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full mt-6 bezaleel-gradient text-white">
+                    Contact Us
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </div>

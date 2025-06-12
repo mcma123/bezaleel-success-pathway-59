@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -34,13 +33,13 @@ const WebsiteDevelopment = () => {
     {
       title: 'Corporate Website',
       description: 'Professional business website with modern design',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600',
+      image: '/trusted installation .png',
       category: 'Corporate'
     },
     {
       title: 'E-commerce Platform',
       description: 'Full-featured online store with payment integration',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600',
+      image: '/teejay bakehouse.png',
       category: 'E-commerce'
     },
     {
@@ -267,9 +266,29 @@ const WebsiteDevelopment = () => {
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button className="bg-white text-bezaleel-red hover:bg-gray-100">
-                      View Project
-                    </Button>
+                    {item.title === 'Portfolio Website' ? (
+                      <a href="https://innovationimperial.co.za/" target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-white text-bezaleel-red hover:bg-gray-100">
+                          View Project
+                        </Button>
+                      </a>
+                    ) : item.title === 'E-commerce Platform' ? (
+                      <a href="https://teejaybakehouse.store/" target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-white text-bezaleel-red hover:bg-gray-100">
+                          View Project
+                        </Button>
+                      </a>
+                    ) : item.title === 'Corporate Website' ? (
+                      <a href="https://www.trustedinstallations.co.za/" target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-white text-bezaleel-red hover:bg-gray-100">
+                          View Project
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button className="bg-white text-bezaleel-red hover:bg-gray-100">
+                        View Project
+                      </Button>
+                    )}
                   </div>
                 </div>
                 <CardHeader>
