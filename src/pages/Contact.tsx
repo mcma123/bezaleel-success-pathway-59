@@ -1,10 +1,9 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Mail, Phone, MapPin, Clock, MessageCircle, Users, Globe, Zap } from 'lucide-react';
+import { Mail, Phone, Clock, MessageCircle, Users, Globe, Zap } from 'lucide-react';
 
 const Contact = () => {
   const contactMethods = [
@@ -275,7 +274,6 @@ const Contact = () => {
         </div>
       </section>
 
-      <WhatsAppButton />
       <Footer />
     </div>
   );
