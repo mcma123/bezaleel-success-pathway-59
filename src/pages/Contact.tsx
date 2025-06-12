@@ -1,6 +1,6 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -20,16 +20,16 @@ const Contact = () => {
       icon: <Phone className="h-8 w-8" />,
       title: "Call South Africa",
       description: "Speak with our SA team",
-      contact: "+27 (0) 62 040 6863",
-      action: "tel:+27620406863",
+      contact: "+27 74 404 7218",
+      action: "tel:+27744047218",
       color: "bg-green-50 border-green-200 text-green-700"
     },
     {
       icon: <Phone className="h-8 w-8" />,
       title: "Call Zimbabwe",
       description: "Connect with our ZW office",
-      contact: "+263 7725 15272",
-      action: "tel:+263772515272",
+      contact: "+263 77 272 4288",
+      action: "tel:+263772724288",
       color: "bg-purple-50 border-purple-200 text-purple-700"
     }
   ];
@@ -62,14 +62,14 @@ const Contact = () => {
       country: "South Africa",
       flag: "🇿🇦",
       description: "Our primary office serving the Southern African region",
-      phone: "+27 (0) 62 040 6863",
+      phone: "+27 74 404 7218",
       services: ["Company Registration", "Banking Setup", "Tax Registration", "Digital Services"]
     },
     {
       country: "Zimbabwe", 
       flag: "🇿🇼",
       description: "Regional office providing comprehensive business services",
-      phone: "+263 7725 15272",
+      phone: "+263 77 272 4288",
       services: ["Business Setup", "Consultation", "Local Compliance", "Support Services"]
     }
   ];
@@ -275,6 +275,7 @@ const Contact = () => {
         </div>
       </section>
 
+      <WhatsAppButton />
       <Footer />
     </div>
   );
