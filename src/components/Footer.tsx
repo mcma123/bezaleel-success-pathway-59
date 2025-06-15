@@ -1,4 +1,3 @@
-
 import { Building, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -20,10 +19,8 @@ const Footer = () => {
     {
       title: "Countries",
       links: [
-        { name: "South Africa", href: "/countries/south-africa" },
-        { name: "Zambia", href: "/countries/zambia" },
-        { name: "Zimbabwe", href: "/countries/zimbabwe" },
-        { name: "Expansion Plans", href: "/about" }
+        { name: "South Africa", href: "/services/south-africa" },
+        { name: "Zambia", href: "/services/zambia" }
       ]
     },
     {
@@ -71,11 +68,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-bezaleel-red flex-shrink-0" />
-                <span className="text-gray-300">info@bezaleelconsultants.com</span>
+                <span className="text-gray-300">enquiries@bezaleelconsultants.co.za</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-bezaleel-red flex-shrink-0" />
-                <span className="text-gray-300">+27 (0) 123 456 789</span>
+                <span className="text-gray-300">+27744047218</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-bezaleel-red flex-shrink-0" />
