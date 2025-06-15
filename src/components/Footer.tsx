@@ -1,4 +1,5 @@
-import { Building, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+
+import { Building, Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -26,21 +27,14 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        { name: "About Us", href: "/about" },
-        { name: "Our Team", href: "/about" },
-        { name: "Careers", href: "/careers" },
-        { name: "News & Updates", href: "/blog" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" }
+        { name: "About Us", href: "/about" }
       ]
     }
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" }
+    { icon: Facebook, href: "https://www.facebook.com/share/1AYZoFXgc7/", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/bezaleelconsultants?igsh=MXBzbWJueTdkZzRuNQ==&utm_source=ig_contact_invite", label: "Instagram" }
   ];
 
   return (
@@ -135,6 +129,8 @@ const Footer = () => {
                     <a
                       key={social.label}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:bg-bezaleel-red hover:text-white transition-all duration-200 hover:scale-110"
                       aria-label={social.label}
                     >
