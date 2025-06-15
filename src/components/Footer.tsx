@@ -1,4 +1,3 @@
-
 import { Building, Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -9,12 +8,12 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { name: "Company Registration", href: "/services" },
-        { name: "Website Development", href: "/services" },
-        { name: "Digital Marketing", href: "/services" },
-        { name: "Business Consulting", href: "/services" },
-        { name: "Legal Compliance", href: "/services" },
-        { name: "Virtual Office", href: "/services" }
+        { name: "Company Registration", href: "/services/company-incorporation" },
+        { name: "Website Development", href: "/services/website-development" },
+        { name: "Digital Marketing", href: "/services/digital-marketing" },
+        { name: "Mobile Development", href: "/services/mobile-development" },
+        { name: "E-commerce", href: "/services/ecommerce" },
+        { name: "Business Services", href: "/services/business-services" }
       ]
     },
     {
