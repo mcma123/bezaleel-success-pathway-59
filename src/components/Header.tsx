@@ -22,6 +22,10 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const servicesByCategory = [
+    { name: 'Company Incorporation', href: '/services/company-incorporation' },
+  ];
+
   const servicesByCountry = [
     { name: 'South Africa', href: '/services/south-africa' },
     { name: 'Zambia', href: '/services/zambia' },
@@ -71,6 +75,17 @@ const Header = () => {
                     All Services
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                {servicesByCategory.map((service) => (
+                  <DropdownMenuItem key={service.name} asChild>
+                    <Link 
+                      to={service.href} 
+                      className="w-full text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200"
+                    >
+                      {service.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
                 <DropdownMenuSeparator />
                 {servicesByCountry.map((country) => (
                   <DropdownMenuItem key={country.name} asChild>
@@ -127,6 +142,16 @@ const Header = () => {
                 >
                   All Services
                 </Link>
+                {servicesByCategory.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.href}
+                    className="text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2 pl-4"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
                 {servicesByCountry.map((country) => (
                   <Link
                     key={country.name}
