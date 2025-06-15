@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -119,7 +120,7 @@ export function BackgroundPaths({
                     </h1>
                     {/* Subheadline */}
                     <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                        One-stop business consulting for South Africa, Zambia & Zimbabwe. From company registration to digital presence, we make business expansion seamless.
+                        One-stop business consulting for South Africa & Zambia. From company registration to digital presence, we make business expansion seamless.
                     </p>
                     {/* CTA Button */}
                     <Link to="/services" className="inline-block group relative bg-gradient-to-b from-black/10 to-white/10 \

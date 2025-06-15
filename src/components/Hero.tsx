@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -66,7 +67,7 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            One-stop business consulting for South Africa, Zambia & Zimbabwe. From company registration to digital presence, we make business expansion seamless.
+            One-stop business consulting for South Africa & Zambia. From company registration to digital presence, we make business expansion seamless.
           </p>
 
           {/* CTA Buttons */}
