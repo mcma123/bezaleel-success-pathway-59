@@ -1,3 +1,4 @@
+
 import { Building, Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -54,7 +55,7 @@ const Footer = () => {
             </Link>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Your trusted partner for business success across Africa. We provide comprehensive consulting services from company registration to digital transformation.
+              At Bezaleel Consultants, we're your trusted partner for launching and growing a business in Southern Africa. From navigating company registration in South Africa and Zambia to setting up corporate bank accounts and handling tax obligations, we've got you covered. But we don't stop there - we also empower your business with digital transformation, ensuring you're not just compliant, but also poised for success and scalability from the start.
             </p>
 
             {/* Contact Info */}
@@ -69,7 +70,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-bezaleel-red flex-shrink-0" />
-                <span className="text-gray-300">Johannesburg, South Africa</span>
+                <span className="text-gray-300">Saldanha Bay, CapeTown South Africa</span>
               </div>
             </div>
           </div>

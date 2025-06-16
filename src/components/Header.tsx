@@ -39,13 +39,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-bezaleel-red rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">B</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-bezaleel-dark">Bezaleel</h1>
-              <p className="text-sm text-gray-600">Consultants</p>
-            </div>
+            <img 
+              src="/lovable-uploads/800f2ab7-e97a-47e0-88c6-50fd08cb14a1.png" 
+              alt="Bezaleel Consultants Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
