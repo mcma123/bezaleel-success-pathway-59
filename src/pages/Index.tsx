@@ -1,6 +1,7 @@
 
 import Header from '@/components/Header';
 import { BackgroundPaths } from "@/components/ui/background-paths";
+import AboutUs from '@/components/AboutUs';
 import ServicesOverview from '@/components/ServicesOverview';
 import CountryServices from '@/components/CountryServices';
 import PricingPlans from '@/components/PricingPlans';
@@ -13,6 +14,7 @@ const Index = () => {
       <Header />
       <main>
         <BackgroundPaths title="Background Paths" />
+        <AboutUs />
         <ServicesOverview />
         <CountryServices />
         <Gallery />

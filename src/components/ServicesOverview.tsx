@@ -1,55 +1,64 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const ServicesOverview = () => {
   const services = [
     {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop",
-      title: "Company Registration",
-      description: "Complete business registration across South Africa, Zambia & Zimbabwe",
-      features: ["CIPC/PACRA Registration", "Tax Number Setup", "Banking Assistance"]
+      title: "Company Incorporation",
+      description: "We assist our clients to set up businesses in South Africa and Zambia",
+      features: ["CIPC/PACRA Registration", "Tax Number Setup", "Banking Assistance"],
+      link: "/services/company-incorporation"
     },
     {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
       title: "Banking & Finance",
       description: "Corporate banking solutions and financial compliance",
-      features: ["Account Opening", "Credit Facilities", "Financial Planning"]
+      features: ["Account Opening", "Credit Facilities", "Financial Planning"],
+      link: "#"
     },
     {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
       title: "Digital Presence",
       description: "Professional websites and e-commerce solutions",
-      features: ["Website Development", "E-commerce Stores", "SEO Optimization"]
+      features: ["Website Development", "E-commerce Stores", "SEO Optimization"],
+      link: "#"
     },
     {
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
       title: "Legal Compliance",
       description: "Business licensing, permits and regulatory compliance",
-      features: ["Business Licenses", "Tax Compliance", "Legal Documentation"]
+      features: ["Business Licenses", "Tax Compliance", "Legal Documentation"],
+      link: "#"
     },
     {
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
       title: "Business Protection",
       description: "Intellectual property and business insurance solutions",
-      features: ["Trademark Registration", "Business Insurance", "IP Protection"]
+      features: ["Trademark Registration", "Business Insurance", "IP Protection"],
+      link: "#"
     },
     {
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
       title: "Virtual Office",
       description: "Professional business address and mail handling services",
-      features: ["Business Address", "Mail Forwarding", "Meeting Rooms"]
+      features: ["Business Address", "Mail Forwarding", "Meeting Rooms"],
+      link: "#"
     },
     {
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
       title: "Systems Development",
       description: "Custom business systems and software solutions",
-      features: ["Management Systems", "Custom Software", "API Integration"]
+      features: ["Management Systems", "Custom Software", "API Integration"],
+      link: "#"
     },
     {
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
       title: "Business Growth",
       description: "Strategic consulting and market expansion support",
-      features: ["Market Research", "Business Planning", "Growth Strategy"]
+      features: ["Market Research", "Business Planning", "Growth Strategy"],
+      link: "#"
     }
   ];
 
@@ -59,20 +68,20 @@ const ServicesOverview = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-bezaleel-dark mb-6">
-            Comprehensive Business Solutions
+            Our Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From company registration to digital transformation, we provide end-to-end business services to help you succeed in African markets.
+            Unlock your business potential with our team of experts: fast, efficient, and transparent.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
-            return (
+            const ServiceCard = (
               <Card 
                 key={service.title} 
-                className="group hover-lift border-2 border-transparent hover:border-bezaleel-red/20 transition-all duration-300 overflow-hidden"
+                className="group hover-lift border-2 border-transparent hover:border-bezaleel-red/20 transition-all duration-300 overflow-hidden cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center pb-4">
@@ -102,6 +111,17 @@ const ServicesOverview = () => {
                 </CardContent>
               </Card>
             );
+
+            // Wrap first card (Company Incorporation) with Link
+            if (index === 0) {
+              return (
+                <Link key={service.title} to={service.link}>
+                  {ServiceCard}
+                </Link>
+              );
+            }
+
+            return ServiceCard;
           })}
         </div>
 
