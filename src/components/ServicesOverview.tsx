@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +15,7 @@ const ServicesOverview = () => {
       title: "Banking & Finance",
       description: "Corporate banking solutions and financial compliance",
       features: ["Account Opening", "Credit Facilities", "Financial Planning"],
-      link: "#"
+      link: "/services/banking-finance"
     },
     {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
@@ -112,8 +111,8 @@ const ServicesOverview = () => {
               </Card>
             );
 
-            // Wrap first card (Company Incorporation) with Link
-            if (index === 0) {
+            // Wrap first two cards (Company Incorporation and Banking & Finance) with Link
+            if (index === 0 || index === 1) {
               return (
                 <Link key={service.title} to={service.link}>
                   {ServiceCard}

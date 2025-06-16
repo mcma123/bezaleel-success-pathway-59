@@ -24,6 +24,7 @@ const Header = () => {
 
   const servicesByCategory = [
     { name: 'Company Incorporation', href: '/services/company-incorporation' },
+    { name: 'Banking & Finance', href: '/services/banking-finance' },
   ];
 
   const servicesByCountry = [
