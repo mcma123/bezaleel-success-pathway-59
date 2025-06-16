@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -16,9 +15,7 @@ const Pricing = () => {
       features: [
         "Company Registration",
         "Bank Account Opening",
-        "Basic Tax Setup",
         "Business License Assistance",
-        "Email Support",
         "Document Preparation"
       ],
       buttonText: "Get Started",

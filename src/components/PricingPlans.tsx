@@ -14,9 +14,7 @@ const PricingPlans = () => {
       features: [
         "Company Registration",
         "Bank Account Opening",
-        "Basic Tax Setup",
         "Business License Assistance",
-        "Email Support",
         "Document Preparation"
       ],
       buttonText: "Get Started",

@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 
@@ -7,7 +8,7 @@ const ServicesOverview = () => {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop",
       title: "Company Incorporation",
       description: "We assist our clients to set up businesses in South Africa and Zambia",
-      features: ["CIPC/PACRA Registration", "Tax Number Setup", "Banking Assistance"],
+      features: ["Company Registration", "Legal Documentation", "Business Setup"],
       link: "/services/company-incorporation"
     },
     {
@@ -29,19 +30,12 @@ const ServicesOverview = () => {
       title: "Legal Compliance",
       description: "Business licensing, permits and regulatory compliance",
       features: ["Business Licenses", "Tax Compliance", "Legal Documentation"],
-      link: "#"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-      title: "Business Protection",
-      description: "Intellectual property and business insurance solutions",
-      features: ["Trademark Registration", "Business Insurance", "IP Protection"],
-      link: "#"
+      link: "/services/legal-compliance"
     },
     {
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
-      title: "Virtual Office",
-      description: "Professional business address and mail handling services",
+      title: "Business Services",
+      description: "Professional business address and comprehensive support services",
       features: ["Business Address", "Mail Forwarding", "Meeting Rooms"],
       link: "#"
     },
@@ -111,8 +105,8 @@ const ServicesOverview = () => {
               </Card>
             );
 
-            // Wrap first two cards (Company Incorporation and Banking & Finance) with Link
-            if (index === 0 || index === 1) {
+            // Wrap first three cards (Company Incorporation, Banking & Finance, and Legal Compliance) with Link
+            if (index === 0 || index === 1 || index === 3) {
               return (
                 <Link key={service.title} to={service.link}>
                   {ServiceCard}

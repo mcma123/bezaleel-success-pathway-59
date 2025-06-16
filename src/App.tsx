@@ -22,6 +22,7 @@ import Zambia from "./pages/services/Zambia";
 import BusinessServices from "./pages/services/BusinessServices";
 import CompanyIncorporation from "./pages/services/CompanyIncorporation";
 import BankingFinance from "./pages/services/BankingFinance";
+import LegalCompliance from "./pages/services/LegalCompliance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +51,7 @@ const App = () => (
             <Route path="/services/business-services" element={<BusinessServices />} />
             <Route path="/services/company-incorporation" element={<CompanyIncorporation />} />
             <Route path="/services/banking-finance" element={<BankingFinance />} />
+            <Route path="/services/legal-compliance" element={<LegalCompliance />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
