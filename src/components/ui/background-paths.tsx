@@ -102,11 +102,11 @@ export function BackgroundPaths({
                     {/* Badge */}
                     <div className="inline-flex items-center px-4 py-2 bg-bezaleel-red/10 rounded-full text-bezaleel-red text-sm font-medium mb-6 animate-bounce-in">
                         <span className="w-2 h-2 bg-bezaleel-red rounded-full mr-2 animate-pulse"></span>
-                        Trusted Business Partners Across Africa
+                        Your Trusted Partner for Business Setup in Southern Africa
                     </div>
                     {/* Main Headline */}
                     <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter text-bezaleel-dark">
-                        Your Gateway to{' '}
+                        Your Partners to{' '}
                         <motion.span
                             key={wordIndex}
                             initial={{ opacity: 0 }}
@@ -116,11 +116,11 @@ export function BackgroundPaths({
                         >
                             {TYPING_WORDS[wordIndex]}&nbsp;
                         </motion.span>
-                        Across Africa
+                        Across Southern Africa
                     </h1>
                     {/* Subheadline */}
                     <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                        One-stop business consulting for South Africa & Zambia. From company registration to digital presence, we make business expansion seamless.
+                        Expert guidance for ambitious entrepreneurs: we simplify market entry, tailor solutions to your goals, and empower confident business growth.
                     </p>
                     {/* CTA Button */}
                     <Link to="/services" className="inline-block group relative bg-gradient-to-b from-black/10 to-white/10 \
