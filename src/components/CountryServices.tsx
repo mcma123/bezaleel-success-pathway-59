@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, Users, Award, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import InteractiveMap from './InteractiveMap';
 
 const CountryServices = () => {
@@ -141,17 +142,25 @@ const CountryServices = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button 
-                    className="flex-1 bezaleel-gradient text-white hover:scale-105 transition-transform duration-300"
+                  <Link 
+                    to={country.name === "South Africa" ? "/services/south-africa" : "/services/zambia"}
+                    className="flex-1"
                   >
-                    Get Started
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="flex-1 border-bezaleel-red text-bezaleel-red hover:bg-bezaleel-red hover:text-white"
+                    <Button className="w-full bezaleel-gradient text-white hover:scale-105 transition-transform duration-300">
+                      Get Started
+                    </Button>
+                  </Link>
+                  <Link 
+                    to={country.name === "South Africa" ? "/services/south-africa" : "/services/zambia"}
+                    className="flex-1"
                   >
-                    Learn More
-                  </Button>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-bezaleel-red text-bezaleel-red hover:bg-bezaleel-red hover:text-white"
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
