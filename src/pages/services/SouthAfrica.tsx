@@ -4,104 +4,118 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, Building, Users, Globe, TrendingUp, Shield, Clock, MapPin, Star, Award, Zap } from 'lucide-react';
+import { CheckCircle, Building, Users, Globe, TrendingUp, Shield, Clock, MapPin, Star, Award, Zap, FileCheck, Calculator, PiggyBank, HelpCircle } from 'lucide-react';
 
 const SouthAfrica = () => {
   const registrationSteps = [
     {
       step: 1,
-      title: "Choosing an optimum business structure to register company in South Africa",
-      description: "Prior to company formation, it is essential to choose the correct type of company. Generally, the most common type of business in South Africa is the private company (\"Pty Ltd\"), which is also known as a company limited by shares.",
+      title: "Selecting Your Ideal Business Structure",
+      description: "Before formalizing your company, it's essential to choose the right legal structure for your business needs. While various options exist, the Private Company (\"Pty Ltd\") – or a company limited by shares – is generally the most common and versatile choice for businesses in South Africa. Our team will guide you through this critical decision to ensure it perfectly aligns with your operational goals.",
       icon: Building,
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop"
     },
     {
       step: 2,
-      title: "Reservation of company name",
-      description: "Bezaleel Consultants will search and reserve your company name with the CIPC website. Our team will reserve your company's name for up to 6 months. Each application for company name registration allows you to submit up to 4 names.",
+      title: "Company Name Reservation",
+      description: "Once your business structure is determined, Bezaleel Consultants efficiently handles the next crucial step: reserving your preferred company name with the Companies and Intellectual Property Commission (CIPC). We will submit up to four potential names on your behalf, and your chosen name will be secured for up to 6 months, giving you ample time for the full registration process to unfold.",
       icon: Shield,
       image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=400&fit=crop"
     },
     {
       step: 3,
-      title: "Preparation and submission of relevant documents",
-      description: "All companies in South Africa require a Memorandum of Incorporation (MOI) to be registered. Bezaleel Consultants will assist in drafting the documents required to register company in South Africa, which includes certified identity copies, name confirmation certificate (COR9.4) and Power of attorney if applicable.",
-      icon: Users,
+      title: "Document Preparation and Submission",
+      description: "Once your name is reserved, we'll move on to preparing all the necessary documents for your company's registration in South Africa. Every company requires a Memorandum of Incorporation (MOI), and Bezaleel Consultants will expertly draft this, along with other essential paperwork. This typically includes certified copies of the applicant's ID, certified IDs for all directors and incorporators, your name confirmation certificate (COR9.4), and a Power of Attorney if needed.",
+      icon: FileCheck,
       image: "https://images.unsplash.com/photo-1554224154-26032fced8bd?w=800&h=400&fit=crop"
     },
     {
       step: 4,
-      title: "Corporate bank account opening",
-      description: "Depending on your business structure, the documents required will be slightly different. Bezaleel Consultants will help in consolidating the documents and opening a corporate account with a reputable bank.",
-      icon: TrendingUp,
+      title: "Seamless Corporate Bank Account Opening",
+      description: "With your company officially registered in South Africa, the next crucial step is opening a corporate bank account. The exact documents required can vary slightly depending on your specific business structure. Regardless, Bezaleel Consultants will simplify this process by helping you consolidate all necessary documents and facilitating the opening of your corporate account with a reputable local bank.",
+      icon: PiggyBank,
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop"
     }
   ];
 
-  const businessStructures = [
+  const taxObligations = [
     {
-      title: 'Private Company ("Pty Ltd")',
-      description: "The most common choice for foreigners looking to register company in South Africa, equivalent to a Limited Liability Company (LLC) in other jurisdictions.",
+      title: "Corporate Income Tax (CIT)",
+      description: "Standard rate of 27% for resident companies on worldwide income, while non-resident companies pay tax only on South African-sourced income.",
       features: [
-        "Separate legal entity from shareholders",
-        "Limited liability protection",
-        "At least one director and shareholder required",
-        "Maximum 50 shareholders",
-        "No restrictions on foreign shareholding"
+        "27% standard rate for companies",
+        "Small Business Corporation rates: 0% on first ZAR 95,750",
+        "7% on income ZAR 95,750 - ZAR 365,000",
+        "21% on income ZAR 365,000 - ZAR 550,000",
+        "27% on income above ZAR 550,000"
       ],
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=300&fit=crop",
-      popular: true
+      icon: Calculator,
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: 'Personal Liability Companies ("Inc")',
-      description: "A separate legal entity held jointly by current and previous directors, mostly used for companies of doctors, lawyers or accountants.",
+      title: "Value-Added Tax (VAT)",
+      description: "15% VAT rate applies to companies conducting business activities in South Africa.",
       features: [
-        "Minimum one director required",
-        "Directors responsible for contractual liabilities",
-        "Shareholders have limited liabilities",
-        "Greater flexibility in profit distribution",
-        "Lower setup costs than partnerships"
+        "Mandatory registration if turnover exceeds ZAR 1 million",
+        "Voluntary registration if income exceeds ZAR 50,000",
+        "Standard 15% VAT rate",
+        "Monthly or bi-monthly returns required"
       ],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=300&fit=crop"
+      icon: TrendingUp,
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: 'Partnership',
-      description: "Comprises 2 or more co-owners running a business together. Not a separate legal entity.",
+      title: "Audit Requirements",
+      description: "Audit requirements vary based on company type and public interest score.",
       features: [
-        "Partners liable for all debts and liabilities",
-        "No separate taxes required",
-        "Three types: General, Anonymous, Commanditarian",
-        "No statutory audit requirements",
-        "Shared profits and losses"
+        "All public companies require audit",
+        "Private companies with Public Interest Score > 350",
+        "Companies holding > ZAR 5 million in fiduciary assets",
+        "Most private companies exempt from mandatory audit"
       ],
-      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=300&fit=crop"
+      icon: FileCheck,
+      color: "from-purple-500 to-pink-500"
     }
   ];
 
-  const whyChooseSouthAfrica = [
+  const complianceSteps = [
     {
-      category: "Political Stability",
-      icon: Globe,
-      description: "South Africa is part of WTO, IMF, G20, and BRICS. Ranks 32/180 on Press Freedom Index and 79/100 on Global Freedom Scores.",
-      image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&h=300&fit=crop"
+      title: "CIPC Compliance & Maintenance",
+      description: "Maintaining accurate records with the Companies and Intellectual Property Commission (CIPC) is fundamental to your company's good standing.",
+      icon: Shield
     },
     {
-      category: "Social Development", 
-      icon: Users,
-      description: "Diverse population with 95% literacy rate. National Development Plan aims to eliminate poverty and reduce inequality.",
-      image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400&h=300&fit=crop"
+      title: "SARS Tax Registration",
+      description: "We ensure your business is properly registered for all applicable taxes, including VAT and Corporate Income Tax.",
+      icon: Calculator
     },
     {
-      category: "Technology Hub",
-      icon: TrendingUp,
-      description: "Undergoing digital reinvention. Opportunity to invest in digital talents ahead of peers due to current talent shortage.",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=300&fit=crop"
+      title: "Ongoing Support",
+      description: "Our expert professionals provide timely advice on tax submissions and payments, helping you avoid penalties.",
+      icon: Users
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "Is a company secretary necessary to incorporate in South Africa?",
+      answer: "No, a company secretary is only mandatory for public companies. A private company is not required to appoint a company secretary. However, all companies in South Africa must appoint a public officer, who must be a local resident in South Africa."
     },
     {
-      category: "Economic Growth",
-      icon: Building,
-      description: "Second-largest economy in Africa. Upper-middle-income emerging market with stock exchange among world's top 20.",
-      image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=400&h=300&fit=crop"
+      question: "Can a foreigner register a business in South Africa?",
+      answer: "Yes, absolutely. Foreigners can register a business in South Africa without any restrictions on foreign ownership or nationality for directors and shareholders. The primary requirement is a valid passport issued by your country of residence."
+    },
+    {
+      question: "Can I register a Close Corporation (CC) in South Africa?",
+      answer: "Under the New Companies Act 2008, new Close Corporations (CCs) can no longer be registered in South Africa. However, existing Close Corporations remain valid legal entities."
+    },
+    {
+      question: "Do I need to register my business for tax?",
+      answer: "No, if your business is registered with the CIPC, you typically do not need to take separate action for initial income tax registration. Upon successful company registration, SARS will automatically generate an Income Tax reference number for your company."
+    },
+    {
+      question: "What is a public officer?",
+      answer: "A public officer serves as the primary representative for all tax-related matters of the company. This individual is responsible for submitting all necessary returns and communicating with SARS on behalf of the company. A public officer must be a registered taxpayer with SARS and reside in South Africa."
     }
   ];
 
@@ -109,7 +123,7 @@ const SouthAfrica = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section with Background Image */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
@@ -127,15 +141,15 @@ const SouthAfrica = () => {
               South Africa Services
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              How to Register Company in South Africa?
+              Complete South Africa Company Registration Services
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Bezaleel Consultants will complete your South Africa company formation through a seamless and fuss-free procedure.
+              Bezaleel Consultants provides complete support for clients looking to legally start a business in South Africa. Our all-inclusive service package ensures a seamless setup, covering company registration, corporate bank account opening, and expertly managing your accounting and tax obligations.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
               <div className="flex items-center bg-white/10 rounded-full px-4 py-2">
                 <Clock className="w-4 h-4 mr-2 text-bezaleel-red" />
-                <span>3 days completion</span>
+                <span>7 days company registration</span>
               </div>
               <div className="flex items-center bg-white/10 rounded-full px-4 py-2">
                 <CheckCircle className="w-4 h-4 mr-2 text-bezaleel-red" />
@@ -150,19 +164,68 @@ const SouthAfrica = () => {
         </div>
       </section>
 
+      {/* Timeline Section */}
+      <section className="py-20 bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
+              <Clock className="w-4 h-4 mr-2" />
+              Timeline
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              How Quickly Can You Start Your Business in South Africa?
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              At Bezaleel Consultants, we streamline the entire process of setting up your company and securing a business bank account in South Africa. The entire registration can be done remotely, so there's no need for you to travel to South Africa.
+            </p>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl text-center group hover-lift">
+                <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-3xl font-bold text-white">7</span>
+                </div>
+                <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Days</h3>
+                <p className="text-muted-foreground">Company registration & tax number</p>
+                <p className="text-sm text-muted-foreground mt-2">Digital copies of core company documents</p>
+              </Card>
+              
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl text-center group hover-lift">
+                <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-3xl font-bold text-white">3</span>
+                </div>
+                <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Days</h3>
+                <p className="text-muted-foreground">Corporate bank account opening</p>
+                <p className="text-sm text-muted-foreground mt-2">For non-residents</p>
+              </Card>
+              
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl text-center group hover-lift">
+                <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-3xl font-bold text-white">2</span>
+                </div>
+                <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Weeks</h3>
+                <p className="text-muted-foreground">Ready to start operations</p>
+                <p className="text-sm text-muted-foreground mt-2">Issue invoices with your new company</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Registration Steps */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
               <Zap className="w-4 h-4 mr-2" />
-              Step by Step Process
+              Company Incorporation Process
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Company Registration Process
+              How to Register Your Company in South Africa?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our streamlined 4-step process ensures your South African company is registered quickly and efficiently.
+              At Bezaleel Consultants, we make establishing your company in South Africa a truly seamless and fuss-free process.
             </p>
           </div>
 
@@ -202,42 +265,129 @@ const SouthAfrica = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
+      {/* Tax Obligations */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
-              <Clock className="w-4 h-4 mr-2" />
-              Timeline
+              <Calculator className="w-4 h-4 mr-2" />
+              Tax & Accounting
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              How Long Does It Take?
+              Understanding Your Tax Obligations in South Africa
             </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Once your company is established, understanding and meeting your ongoing financial obligations is crucial. Bezaleel Consultants helps ensure your business remains fully compliant with South African regulations.
+            </p>
           </div>
-          
-          <div className="max-w-4xl mx-auto">
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {taxObligations.map((obligation, index) => {
+              const Icon = obligation.icon;
+              return (
+                <Card key={index} className="group hover-lift border-2 border-transparent hover:border-bezaleel-red/20 overflow-hidden">
+                  <CardHeader>
+                    <div className={`w-16 h-16 bg-gradient-to-br ${obligation.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-bezaleel-red transition-colors text-center">
+                      {obligation.title}
+                    </CardTitle>
+                    <CardDescription className="text-muted-foreground text-center">
+                      {obligation.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {obligation.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start text-sm text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 text-bezaleel-red mr-3 mt-0.5 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Ongoing Compliance */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
+              <Shield className="w-4 h-4 mr-2" />
+              Ongoing Compliance
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              Key Steps After Company Registration
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Successfully registering your company is just the first step. Maintaining its legal and financial good standing in South Africa requires ongoing attention to compliance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {complianceSteps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <Card key={index} className="group hover-lift text-center border-2 border-transparent hover:border-bezaleel-red/20">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-bezaleel-red transition-colors">
+                      {step.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Foreign Ownership Section */}
+      <section className="py-20 bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
+              <Globe className="w-4 h-4 mr-2" />
+              Foreign Ownership
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              Can a Foreigner Register a Company in South Africa?
+            </h2>
             <Card className="p-8 border-2 border-bezaleel-red/10 shadow-xl">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-3xl font-bold text-white">3</span>
+              <div className="text-left space-y-6">
+                <p className="text-lg text-muted-foreground">
+                  <strong>Absolutely, yes!</strong> Under South Africa's Companies Act 2008, there are no restrictions on foreign ownership or the nationality of directors and shareholders. This means individuals from anywhere in the world can legally register and own a company in South Africa.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-bezaleel-red mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-muted-foreground">No restrictions on foreign ownership</span>
                   </div>
-                  <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Days</h3>
-                  <p className="text-muted-foreground">Company registration & tax number</p>
-                </div>
-                <div className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-3xl font-bold text-white">3</span>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-bezaleel-red mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-muted-foreground">Foreign directors and shareholders allowed</span>
                   </div>
-                  <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Days</h3>
-                  <p className="text-muted-foreground">Corporate bank account opening</p>
-                </div>
-                <div className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-3xl font-bold text-white">1</span>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-bezaleel-red mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-muted-foreground">No minimum paid-up capital requirements</span>
                   </div>
-                  <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Week</h3>
-                  <p className="text-muted-foreground">Start operations & issue invoices</p>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-bezaleel-red mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-muted-foreground">Most industries permit 100% foreign ownership</span>
+                  </div>
                 </div>
               </div>
             </Card>
@@ -245,112 +395,34 @@ const SouthAfrica = () => {
         </div>
       </section>
 
-      {/* Business Structures */}
+      {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
-              <Building className="w-4 h-4 mr-2" />
-              Business Structures
+              <HelpCircle className="w-4 h-4 mr-2" />
+              FAQ
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Types of Business Structures
+              Frequently Asked Questions
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Choose the right business structure for your South African company registration.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {businessStructures.map((structure, index) => (
-              <Card key={index} className="group hover-lift border-2 border-transparent hover:border-bezaleel-red/20 overflow-hidden relative">
-                {structure.popular && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <Badge className="bg-bezaleel-red text-white">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </Badge>
-                  </div>
-                )}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={structure.image}
-                    alt={structure.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {faqs.map((faq, index) => (
+              <Card key={index} className="group hover-lift border-2 border-transparent hover:border-bezaleel-red/20">
                 <CardHeader>
-                  <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-bezaleel-red transition-colors">
-                    {structure.title}
+                  <CardTitle className="text-lg font-bold text-bezaleel-dark group-hover:text-bezaleel-red transition-colors">
+                    {faq.question}
                   </CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {structure.description}
-                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3">
-                    {structure.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start text-sm text-muted-foreground">
-                        <CheckCircle className="w-4 h-4 text-bezaleel-red mr-3 mt-0.5 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <CardDescription className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose South Africa */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
-              <Award className="w-4 h-4 mr-2" />
-              Why South Africa
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Why Register a Company in South Africa?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              South Africa offers numerous advantages for business registration and expansion.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyChooseSouthAfrica.map((reason, index) => {
-              const Icon = reason.icon;
-              return (
-                <Card key={index} className="group hover-lift text-center overflow-hidden border-2 border-transparent hover:border-bezaleel-red/20">
-                  <div className="relative h-40 overflow-hidden">
-                    <img
-                      src={reason.image}
-                      alt={reason.category}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <Icon className="w-8 h-8 text-white" />
-                      </div>
-                    </div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-lg font-bold text-bezaleel-dark group-hover:text-bezaleel-red transition-colors">
-                      {reason.category}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-muted-foreground text-sm leading-relaxed">
-                      {reason.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -363,7 +435,7 @@ const SouthAfrica = () => {
             Ready to Register Your South African Company?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let Bezaleel Consultants handle your South African company registration with our seamless, fuss-free process.
+            Let Bezaleel Consultants handle your South African company registration with our seamless, comprehensive process. We've helped thousands of businesses thrive in South Africa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-bezaleel-red hover:bg-gray-100 font-semibold px-8 py-3 shadow-xl">
