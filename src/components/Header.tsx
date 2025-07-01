@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -22,7 +23,7 @@ const Header = () => {
 
   const servicesByCategory = [
     { name: 'Company Incorporation', href: '/services/company-incorporation' },
-    { name: 'Banking & Finance', href: '/services/banking-finance' },
+    { name: 'Corporate Bank Account Services', href: '/services/banking-finance' },
     { name: 'Legal Compliance', href: '/services/legal-compliance' },
   ];
 

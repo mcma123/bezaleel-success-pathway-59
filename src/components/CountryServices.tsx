@@ -13,18 +13,10 @@ const CountryServices = () => {
       flag: "🇿🇦",
       description: "Complete business setup and digital transformation services",
       stats: {
-        companies: "300+",
+        companies: "2500+",
         satisfaction: "98%",
-        timeToSetup: "7 days"
+        timeToSetup: "14 days"
       },
-      services: [
-        "Company Registration (Pty Ltd, CC, NPC)",
-        "SARS Tax Registration",
-        "Bank Account Opening",
-        "BEE Certificates",
-        "CIPC Compliance",
-        "VAT Registration"
-      ],
       color: "from-green-500 to-yellow-500"
     },
     {
@@ -32,18 +24,10 @@ const CountryServices = () => {
       flag: "🇿🇲",
       description: "Professional business registration and compliance services",
       stats: {
-        companies: "150+",
+        companies: "2000+",
         satisfaction: "96%",
-        timeToSetup: "10 days"
+        timeToSetup: "14 days"
       },
-      services: [
-        "Business Registration",
-        "PACRA Registration",
-        "ZRA Tax Registration",
-        "Work Permits & Visas",
-        "Trading Licenses",
-        "Environmental Permits"
-      ],
       color: "from-blue-500 to-green-500"
     }
   ];
@@ -60,7 +44,7 @@ const CountryServices = () => {
             Business Setup Across Africa
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We specialize in helping entrepreneurs and businesses establish their presence across African markets with comprehensive registration and compliance services.
+            Establish your business confidently in South Africa or Zambia with our expert team. We provide the strategies and support to move beyond struggle to significant growth.
           </p>
         </div>
 
@@ -127,19 +111,6 @@ const CountryServices = () => {
               </CardHeader>
 
               <CardContent className="space-y-6">
-                {/* Services List */}
-                <div>
-                  <h4 className="font-semibold text-bezaleel-dark mb-3">Available Services:</h4>
-                  <div className="grid grid-cols-1 gap-2">
-                    {country.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 bg-bezaleel-red rounded-full mr-3"></div>
-                        {service}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link 

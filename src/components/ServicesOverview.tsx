@@ -19,7 +19,7 @@ const ServicesOverview = () => {
     {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
       title: "Digital Presence",
-      description: "At Bezaleel Consultants, we specialize in building powerful digital solutions for businesses of all sizes. From modern web development and scalable e-commerce stores to fully integrated business systems such as accounting platforms, HR management tools, and enterprise resource planning (ERP), our team delivers systems designed to streamline operations and drive growth. We are committed to creating reliable, user-friendly, and future-ready platforms that empower your business to thrive in today's digital economy.",
+      description: "At Bezaleel Consultants, we deliver smart digital solutions—from web development and e-commerce to accounting, HR, and ERP systems and all types of business systems designed to streamline operations and drive business growth.",
       link: "#"
     },
     {
