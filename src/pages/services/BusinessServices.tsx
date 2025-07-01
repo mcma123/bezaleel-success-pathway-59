@@ -15,22 +15,20 @@ const BusinessServices = () => {
       flag: '🇿🇦',
       description: 'Register your company in Africa\'s most developed economy with seamless CIPC registration',
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&h=600&fit=crop',
+      link: '/services/south-africa',
       services: [
         'CIPC Company Registration',
-        'SARS Tax Registration', 
-        'Corporate Banking Setup',
-        'BEE Certificates',
-        'Business Licensing',
-        'VAT Registration'
+        'SARS Tax Registration',
+        'B-BBEE Certification',
+        'Business Bank Account Setup'
       ],
-      timeline: '3-5 Business Days',
-      link: '/services/south-africa',
       highlights: [
         'Second-largest economy in Africa',
         'Part of BRICS, G20, WTO',
         'Advanced banking system',
         'Strong legal framework'
-      ]
+      ],
+      timeline: '14 Business Days'
     },
     {
       id: 'zambia',
@@ -38,22 +36,20 @@ const BusinessServices = () => {
       flag: '🇿🇲',
       description: 'Establish your business in the heart of Africa with PACRA registration and comprehensive support',
       image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=600&fit=crop',
-      services: [
-        'PACRA Business Registration',
-        'ZRA Tax Registration',
-        'Work Permit Assistance',
-        'Corporate Banking',
-        'Investment Incentives',
-        'Multi-Facility Economic Zones'
-      ],
-      timeline: '7-10 Business Days',
       link: '/services/zambia',
+      services: [
+        'PACRA Company Registration',
+        'Tax Registration (ZRA)',
+        'Business Licensing',
+        'Corporate Bank Account Setup'
+      ],
       highlights: [
-        'Strategic location in SADC',
+        'Strategic location in Central Africa',
         'Rich in natural resources',
-        'Investment incentives available',
-        'Growing economy'
-      ]
+        'Growing economy',
+        'Stable political environment'
+      ],
+      timeline: '14 Business Days'
     }
   ];
 
@@ -132,39 +128,7 @@ const BusinessServices = () => {
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
-                  {/* Services */}
-                  <div>
-                    <h4 className="font-semibold text-bezaleel-dark mb-3 flex items-center">
-                      <Building className="w-4 h-4 mr-2 text-bezaleel-red" />
-                      Our Services
-                    </h4>
-                    <div className="grid grid-cols-1 gap-2">
-                      {country.services.map((service, index) => (
-                        <div key={index} className="flex items-center text-sm text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-bezaleel-red mr-3 flex-shrink-0" />
-                          {service}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Key Highlights */}
-                  <div>
-                    <h4 className="font-semibold text-bezaleel-dark mb-3 flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-2 text-bezaleel-red" />
-                      Key Advantages
-                    </h4>
-                    <div className="grid grid-cols-1 gap-2">
-                      {country.highlights.map((highlight, index) => (
-                        <div key={index} className="flex items-center text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 bg-bezaleel-red rounded-full mr-3 flex-shrink-0"></div>
-                          {highlight}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
+                <CardContent className="space-y-4">
                   {/* Timeline */}
                   <div className="bg-bezaleel-red/5 rounded-lg p-4">
                     <div className="flex items-center justify-between">
