@@ -31,27 +31,6 @@ const ServicesOverview = () => {
       description: "Business licensing, permits and regulatory compliance",
       features: ["Business Licenses", "Tax Compliance", "Legal Documentation"],
       link: "/services/legal-compliance"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
-      title: "Business Services",
-      description: "Professional business address and comprehensive support services",
-      features: ["Business Address", "Mail Forwarding", "Meeting Rooms"],
-      link: "#"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
-      title: "Systems Development",
-      description: "Custom business systems and software solutions",
-      features: ["Management Systems", "Custom Software", "API Integration"],
-      link: "#"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-      title: "Business Growth",
-      description: "Strategic consulting and market expansion support",
-      features: ["Market Research", "Business Planning", "Growth Strategy"],
-      link: "#"
     }
   ];
 

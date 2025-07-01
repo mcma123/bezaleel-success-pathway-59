@@ -53,7 +53,7 @@ function FloatingPaths({ position }: { position: number }) {
     );
 }
 
-const TYPING_WORDS = ["Business Success", "Digital Transformation"];
+const TYPING_WORDS = ["Business Success", "Business Success"];
 const FADE_DURATION = 500; // ms for fade in/out
 const DISPLAY_DURATION = 10000; // 10 seconds between changes
 
@@ -102,7 +102,7 @@ export function BackgroundPaths({
                     {/* Badge */}
                     <div className="inline-flex items-center px-4 py-2 bg-bezaleel-red/10 rounded-full text-bezaleel-red text-sm font-medium mb-6 animate-bounce-in">
                         <span className="w-2 h-2 bg-bezaleel-red rounded-full mr-2 animate-pulse"></span>
-                        Your Trusted Partner for Business Setup in Southern Africa
+                        Trusted experts in South Africa & Zambia business formation
                     </div>
                     {/* Main Headline */}
                     <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter text-bezaleel-dark">
@@ -148,4 +148,4 @@ export function BackgroundPaths({
             </div>
         </div>
     );
-} 
+}
