@@ -7,29 +7,25 @@ const ServicesOverview = () => {
     {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop",
       title: "Company Incorporation",
-      description: "We assist our clients to set up businesses in South Africa and Zambia",
-      features: ["Company Registration", "Legal Documentation", "Business Setup"],
+      description: "At Bezaleel Consultants, we specialize in guiding businesses through the company incorporation process in South Africa and Zambia. Our expert team ensures a seamless and efficient experience, helping you establish a strong foundation for growth and success.",
       link: "/services/company-incorporation"
     },
     {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-      title: "Banking & Finance",
-      description: "Corporate banking solutions and financial compliance",
-      features: ["Account Opening", "Credit Facilities", "Financial Planning"],
+      title: "Corporate Bank Account Services",
+      description: "Streamline your financial operations with our expert corporate bank account opening services in South Africa and Zambia. Our team will guide you through the process, ensuring a smooth and efficient experience.",
       link: "/services/banking-finance"
     },
     {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
       title: "Digital Presence",
-      description: "Professional websites and e-commerce solutions",
-      features: ["Website Development", "E-commerce Stores", "SEO Optimization"],
+      description: "At Bezaleel Consultants, we specialize in building powerful digital solutions for businesses of all sizes. From modern web development and scalable e-commerce stores to fully integrated business systems such as accounting platforms, HR management tools, and enterprise resource planning (ERP), our team delivers systems designed to streamline operations and drive growth. We are committed to creating reliable, user-friendly, and future-ready platforms that empower your business to thrive in today's digital economy.",
       link: "#"
     },
     {
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
       title: "Legal Compliance",
-      description: "Business licensing, permits and regulatory compliance",
-      features: ["Business Licenses", "Tax Compliance", "Legal Documentation"],
+      description: "Compliance made easy. Our team of experts will guide you through regulatory requirements, ensuring your business operates smoothly and within the law.",
       link: "/services/legal-compliance"
     }
   ];
@@ -67,24 +63,16 @@ const ServicesOverview = () => {
                   <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-bezaleel-red transition-colors duration-300">
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {service.description}
-                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-bezaleel-red rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <CardDescription className="text-muted-foreground text-sm leading-relaxed">
+                    {service.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             );
 
-            // Wrap first three cards (Company Incorporation, Banking & Finance, and Legal Compliance) with Link
+            // Wrap first three cards (Company Incorporation, Corporate Bank Account Services, and Legal Compliance) with Link
             if (index === 0 || index === 1 || index === 3) {
               return (
                 <Link key={service.title} to={service.link}>

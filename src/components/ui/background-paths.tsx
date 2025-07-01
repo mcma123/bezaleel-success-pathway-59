@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -53,7 +52,7 @@ function FloatingPaths({ position }: { position: number }) {
     );
 }
 
-const TYPING_WORDS = ["Business Success", "Business Success"];
+const TYPING_WORDS = ["Business Success", "Business Setup"];
 const FADE_DURATION = 500; // ms for fade in/out
 const DISPLAY_DURATION = 10000; // 10 seconds between changes
 
