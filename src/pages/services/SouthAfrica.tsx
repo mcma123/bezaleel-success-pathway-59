@@ -1,10 +1,9 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, Building, Users, Globe, TrendingUp, Shield, Clock, MapPin, Star, Award, Zap, FileCheck, Calculator, PiggyBank, HelpCircle } from 'lucide-react';
+import { CheckCircle, Building, Users, Globe, TrendingUp, Shield, Clock, MapPin, Star, Award, Zap, FileCheck, Calculator, PiggyBank, HelpCircle, CreditCard } from 'lucide-react';
 
 const SouthAfrica = () => {
   const registrationSteps = [
@@ -264,6 +263,51 @@ const SouthAfrica = () => {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Bank Account Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
+              <CreditCard className="w-4 h-4 mr-2" />
+              Corporate Bank Account
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              Opening Your Corporate Bank Account
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              A dedicated corporate bank account is essential for transparent financial management and compliance of your South African business.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-8 border-2 border-bezaleel-red/10 shadow-xl">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-bezaleel-dark mb-4">Expert Assistance</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Bezaleel Consultants provides expert assistance to make this crucial step effortless. We help you prepare all required documentation and liaise directly with leading local banks on your behalf.
+                  </p>
+                  <div className="flex items-center text-bezaleel-red mb-4">
+                    <Clock className="w-5 h-5 mr-3" />
+                    <span className="font-semibold">For non-resident directors, this vital process is often concluded in as little as 3 days</span>
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5 p-6 rounded-lg">
+                  <h3 className="text-2xl font-bold text-bezaleel-dark mb-4">Why Choose Us to Open Your Corporate Account?</h3>
+                  <p className="text-muted-foreground mb-4">
+                    At Bezaleel Consultants, we're passionate about empowering entrepreneurs like you. We've already helped thousands of businesses thrive in South Africa by providing them with brand new, fully functional business accounts.
+                  </p>
+                  <p className="text-muted-foreground">
+                    Our team of dedicated experts is committed to not only delivering top-tier solutions but also ensuring you receive efficient and outstanding customer service every step of the way. Partner with us and experience the difference true dedication makes to your business growth.
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
