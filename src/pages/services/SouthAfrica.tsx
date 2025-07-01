@@ -26,7 +26,7 @@ const SouthAfrica = () => {
       title: "Document Preparation and Submission",
       description: "Once your name is reserved, we'll move on to preparing all the necessary documents for your company's registration in South Africa. Every company requires a Memorandum of Incorporation (MOI), and Bezaleel Consultants will expertly draft this, along with other essential paperwork. This typically includes certified copies of the applicant's ID, certified IDs for all directors and incorporators, your name confirmation certificate (COR9.4), and a Power of Attorney if needed.",
       icon: FileCheck,
-      image: "https://images.unsplash.com/photo-1554224154-26032fced8bd?w=800&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1570929057588-6952f7dd2305?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       step: 4,

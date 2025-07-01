@@ -23,28 +23,21 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme') as Theme;
-      return saved || 'light';
-    }
-    return 'light';
-  });
+  const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
     const root = window.document.documentElement;
     
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
+    // Always remove dark class to ensure light mode
+    root.classList.remove('dark');
     
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    // Always set theme to light in localStorage
+    localStorage.setItem('theme', 'light');
+  }, []);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    // Always keep the theme as light
+    setTheme('light');
   };
 
   return (
