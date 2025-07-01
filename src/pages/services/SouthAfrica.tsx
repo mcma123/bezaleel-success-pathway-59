@@ -146,20 +146,6 @@ const SouthAfrica = () => {
             <p className="text-xl text-white/90 mb-8">
               Bezaleel Consultants provides complete support for clients looking to legally start a business in South Africa. Our all-inclusive service package ensures a seamless setup, covering company registration, corporate bank account opening, and expertly managing your accounting and tax obligations.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
-              <div className="flex items-center bg-white/10 rounded-full px-4 py-2">
-                <Clock className="w-4 h-4 mr-2 text-bezaleel-red" />
-                <span>7 days company registration</span>
-              </div>
-              <div className="flex items-center bg-white/10 rounded-full px-4 py-2">
-                <CheckCircle className="w-4 h-4 mr-2 text-bezaleel-red" />
-                <span>100% Remote process</span>
-              </div>
-              <div className="flex items-center bg-white/10 rounded-full px-4 py-2">
-                <Shield className="w-4 h-4 mr-2 text-bezaleel-red" />
-                <span>Fully compliant</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -173,11 +159,28 @@ const SouthAfrica = () => {
               Timeline
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              How Quickly Can You Start Your Business in South Africa?
+              How Quickly Can You Start Your Business in South Africa with Bezaleel Consultants?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              At Bezaleel Consultants, we streamline the entire process of setting up your company and securing a business bank account in South Africa. The entire registration can be done remotely, so there's no need for you to travel to South Africa.
-            </p>
+            <div className="max-w-4xl mx-auto text-left space-y-6">
+              <p className="text-xl text-muted-foreground">
+                At Bezaleel Consultants, we streamline the entire process of setting up your company and securing a business bank account in South Africa, making it as seamless and stress-free as possible.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Once we receive the necessary documents from your directors and shareholders, we'll immediately begin a name availability search for your preferred company name. The entire registration can be done remotely, so there's no need for you to travel to South Africa.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                You can expect to receive your South Africa company tax number and digital copies of your core company documents—like the Company Registration Certificate, Notice of Incorporation, and Memorandum of Incorporation (MOI)—all within 7 days.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                After your company is successfully registered, we'll expertly guide you through opening a corporate bank account with a local South African bank. This step, especially for non-residents, typically takes just around 3 additional days.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                This means you can anticipate being ready to start operations and issue invoices with your new South African company within just 2 weeks of partnering with Bezaleel Consultants.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Beyond the initial setup, our team of Chartered Accountants is here to ensure your newly established company always meets the financial and regulatory standards set by the South African Revenue Service (SARS). We provide comprehensive monthly bookkeeping, prepare your financial statements, and handle your annual tax return filings, allowing you to maintain full compliance with ease.
+              </p>
+            </div>
           </div>
           
           <div className="max-w-6xl mx-auto">
