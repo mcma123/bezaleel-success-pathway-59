@@ -227,6 +227,211 @@ const Zambia = () => {
         </div>
       </section>
 
+      {/* Comprehensive Guide Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-emerald-100 text-emerald-700 hover:bg-emerald-200">
+              <Building className="w-4 h-4 mr-2" />
+              Company Registration Guide
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              Starting a Business in Zambia: Your Comprehensive Guide to Company Registration
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+              Embarking on your entrepreneurial journey in Zambia? The first crucial step is registering your company. 
+              This comprehensive guide will walk you through the entire company registration process, from choosing the right 
+              business structure and securing a company name to filing the necessary documents and obtaining the required licenses.
+            </p>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              Whether you're a local entrepreneur or a foreign investor, we'll provide you with the knowledge and resources 
+              to navigate the registration process smoothly and efficiently. We'll also highlight key considerations to ensure 
+              compliance with all relevant regulations.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <Card className="mb-12 border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 to-white">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-bezaleel-dark flex items-center">
+                  <Building className="w-8 h-8 text-emerald-600 mr-3" />
+                  Establishing Your Business in Zambia
+                </CardTitle>
+                <CardDescription className="text-lg text-muted-foreground">
+                  Zambia presents a dynamic and increasingly attractive environment for business, offering strategic access 
+                  to the Southern African market. Successfully establishing and operating a business here requires a clear 
+                  understanding of local regulations and processes. Bezaleel Consultants offers end-to-end expertise to 
+                  ensure your venture's smooth launch and sustained growth in Zambia.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-bezaleel-dark mb-4">
+                  1. Company Incorporation in Zambia
+                </CardTitle>
+                <CardDescription className="text-lg text-muted-foreground mb-6">
+                  The most common and recommended legal entity for foreign investors in Zambia is the{' '}
+                  <strong>Private Limited Company by Shares (Limited Liability Company - LLC)</strong>. 
+                  This structure provides flexibility and limits liability for its shareholders. All company registrations 
+                  are overseen by the <strong>Patents and Companies Registration Agency (PACRA)</strong>.
+                </CardDescription>
+              </CardHeader>
+              
+              <CardContent className="space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold text-bezaleel-dark mb-4 flex items-center">
+                    <CheckCircle className="w-6 h-6 text-emerald-500 mr-2" />
+                    Key Features & Requirements
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <Users className="w-5 h-5 text-emerald-500 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Minimum Shareholders</h5>
+                          <p className="text-sm text-muted-foreground">
+                            A minimum of <strong>two shareholders</strong> is generally required. Both individuals and 
+                            corporate entities can act as shareholders, allowing for versatile ownership structures. 
+                            100% foreign ownership is permitted.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <Building className="w-5 h-5 text-emerald-500 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Minimum Directors</h5>
+                          <p className="text-sm text-muted-foreground">
+                            A minimum of <strong>two directors</strong> are typically required. There are no nationality 
+                            restrictions for directors, offering flexibility for international businesses.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <FileText className="w-5 h-5 text-emerald-500 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Company Secretary</h5>
+                          <p className="text-sm text-muted-foreground">
+                            The appointment of a <strong>qualified company secretary is a mandatory requirement</strong> 
+                            under Zambian company law. This individual plays a crucial role in ensuring corporate 
+                            governance and regulatory compliance.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <MapPin className="w-5 h-5 text-emerald-500 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Registered Office</h5>
+                          <p className="text-sm text-muted-foreground">
+                            All companies must maintain a <strong>registered office address within Zambia</strong>. 
+                            This address serves as the official point of contact for all legal and official communications.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <TrendingUp className="w-5 h-5 text-emerald-500 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Share Capital</h5>
+                          <p className="text-sm text-muted-foreground">
+                            While a minimum share capital was previously a common requirement, current information 
+                            suggests that for a Private Limited Company by Shares, there may be{' '}
+                            <strong>no statutory minimum share capital requirement</strong> in Zambia. We will confirm 
+                            the latest specific requirements during your consultation.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <Shield className="w-5 h-5 text-emerald-500 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Memorandum and Articles of Association (MAA)</h5>
+                          <p className="text-sm text-muted-foreground">
+                            These fundamental documents define the company's objectives, internal regulations, and 
+                            operational framework.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+                  <h4 className="text-xl font-bold text-bezaleel-dark mb-4 flex items-center">
+                    <Zap className="w-6 h-6 text-emerald-600 mr-2" />
+                    How Bezaleel Consultants Can Help with Incorporation
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-4 h-4 text-emerald-600 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Name Reservation</h5>
+                          <p className="text-sm text-muted-foreground">
+                            We conduct thorough name searches and secure your preferred company name with PACRA.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-4 h-4 text-emerald-600 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Document Drafting & Filing</h5>
+                          <p className="text-sm text-muted-foreground">
+                            Our experts draft and meticulously prepare all necessary incorporation documents, including 
+                            the Memorandum and Articles of Association, ensuring full compliance with Zambian law.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-4 h-4 text-emerald-600 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">PACRA Registration</h5>
+                          <p className="text-sm text-muted-foreground">
+                            We handle the entire submission process with PACRA, overseeing the registration until your 
+                            Certificate of Incorporation and Certificate of Share Capital are issued.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-4 h-4 text-emerald-600 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Registered Office</h5>
+                          <p className="text-sm text-muted-foreground">
+                            We can facilitate the provision of a compliant registered office address in Zambia.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-4 h-4 text-emerald-600 mt-1" />
+                        <div>
+                          <h5 className="font-semibold text-bezaleel-dark">Director & Secretary Appointment</h5>
+                          <p className="text-sm text-muted-foreground">
+                            We assist with the formal appointment processes for your directors and mandatory company 
+                            secretary, ensuring all legal stipulations are met.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Key Highlights */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
