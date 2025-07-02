@@ -8,7 +8,7 @@ const ServicesOverview = () => {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop",
       title: "Company Incorporation",
       description: "At Bezaleel Consultants, we specialize in guiding businesses through the company incorporation process in South Africa and Zambia. Our expert team ensures a seamless and efficient experience, helping you establish a strong foundation for growth and success.",
-      link: "/services/company-incorporation"
+      link: "/services"
     },
     {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",

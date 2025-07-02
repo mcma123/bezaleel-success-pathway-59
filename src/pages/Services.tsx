@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, Building, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { MapPin, Building, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
@@ -149,70 +149,6 @@ const Services = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Services Overview */}
-      <section className="py-20 bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Comprehensive Business Support
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Beyond registration, we provide ongoing support to ensure your business thrives in the African market.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center hover-lift">
-              <CardHeader>
-                <div className="w-16 h-16 bg-bezaleel-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building className="w-8 h-8 text-bezaleel-red" />
-                </div>
-                <CardTitle className="text-xl font-bold text-bezaleel-dark">
-                  Registration & Compliance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Complete business registration, tax setup, and ongoing compliance management.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover-lift">
-              <CardHeader>
-                <div className="w-16 h-16 bg-bezaleel-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-bezaleel-red" />
-                </div>
-                <CardTitle className="text-xl font-bold text-bezaleel-dark">
-                  Banking & Finance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Corporate banking setup, financial planning, and investment advisory services.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover-lift">
-              <CardHeader>
-                <div className="w-16 h-16 bg-bezaleel-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-bezaleel-red" />
-                </div>
-                <CardTitle className="text-xl font-bold text-bezaleel-dark">
-                  Business Support
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Virtual office services, business consulting, and ongoing operational support.
-                </CardDescription>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

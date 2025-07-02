@@ -22,7 +22,6 @@ const Header = () => {
   ];
 
   const servicesByCategory = [
-    { name: 'Company Incorporation', href: '/services/company-incorporation' },
     { name: 'Corporate Bank Account Services', href: '/services/banking-finance' },
     { name: 'Legal Compliance', href: '/services/legal-compliance' },
   ];
