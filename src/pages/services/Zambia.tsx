@@ -1,10 +1,9 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, Users, Globe, TrendingUp, Building, Shield, Smartphone, Zap, Clock, FileText, Calculator, CheckCircle, HelpCircle } from 'lucide-react';
+import { MapPin, Users, Globe, TrendingUp, Building, Shield, Smartphone, Zap, Clock, FileText, Calculator, CheckCircle, HelpCircle, CreditCard } from 'lucide-react';
 
 const Zambia = () => {
   const keyHighlights = [
@@ -166,6 +165,37 @@ const Zambia = () => {
       phase: "Bank Account",
       duration: "7 Days",
       description: "Corporate bank account opening process"
+    }
+  ];
+
+  const bankAccountRequirements = [
+    {
+      title: "Company Documents",
+      items: [
+        "Certified copies of Certificate of Incorporation",
+        "Certificate of Share Capital",
+        "Articles of Association",
+        "Relevant PACRA forms (Form 5 for directors, Form 3 for shareholders)"
+      ]
+    },
+    {
+      title: "Legal & Tax Documents",
+      items: [
+        "Board Resolution authorizing account opening",
+        "Taxpayer Identification Number (TPIN) proof",
+        "Tax Clearance Certificate from ZRA",
+        "Ultimate Beneficial Owner (UBO) Declaration"
+      ]
+    },
+    {
+      title: "Identity & Business Information",
+      items: [
+        "Valid passports/NRCs of signatories and directors",
+        "Passport-sized photos of authorized signatories",
+        "Proof of residential address (utility bill within 3 months)",
+        "Business profile/plan overview",
+        "Proof of business address (utility bill or lease agreement)"
+      ]
     }
   ];
 
@@ -505,43 +535,212 @@ const Zambia = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* Corporate Bank Account Opening Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-emerald-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">
+              <CreditCard className="w-4 h-4 mr-2" />
+              Banking Services
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              2. Corporate Bank Account Opening Services
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+              A fully operational corporate bank account is indispensable for managing your business finances, 
+              facilitating transactions, and adhering to financial regulations in Zambia. While the process can be 
+              detail-intensive, Bezaleel Consultants streamlines it for your convenience.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+              {bankAccountRequirements.map((req, index) => (
+                <Card key={index} className="group hover-lift border-2 border-transparent hover:border-blue-200 transition-all duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-blue-600 transition-colors duration-300">
+                      {req.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {req.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start text-sm text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-bezaleel-dark mb-4 flex items-center">
+                  <Zap className="w-8 h-8 text-blue-600 mr-3" />
+                  How Bezaleel Consultants Can Help with Bank Account Opening
+                </CardTitle>
+              </CardHeader>
+              
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
+                      <div>
+                        <h5 className="font-semibold text-bezaleel-dark">Bank Liaison</h5>
+                        <p className="text-sm text-muted-foreground">
+                          We act as your primary point of contact with a reputable local bank operating in Zambia.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
+                      <div>
+                        <h5 className="font-semibold text-bezaleel-dark">Document Preparation & Vetting</h5>
+                        <p className="text-sm text-muted-foreground">
+                          We guide you through the precise documentation required, assisting with preparation and 
+                          ensuring all forms are accurately completed to minimize delays.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
+                      <div>
+                        <h5 className="font-semibold text-bezaleel-dark">Application Facilitation</h5>
+                        <p className="text-sm text-muted-foreground">
+                          We submit your application and follow up diligently, helping to navigate any queries from the bank.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
+                      <div>
+                        <h5 className="font-semibold text-bezaleel-dark">Streamlined Process</h5>
+                        <p className="text-sm text-muted-foreground">
+                          Our expertise ensures a more efficient and less burdensome experience in securing your 
+                          crucial corporate bank account.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Updated Timeline Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-emerald-100 text-emerald-700 hover:bg-emerald-200">
               <Clock className="w-4 h-4 mr-2" />
-              Registration Timeline
+              Business Setup Timeline
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              How Long Does Company Registration Take?
+              3. Timeline for Business Setup in Zambia
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Complete business setup from consultation to operational company with bank account in just 1-2 weeks
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+              While specific timelines can vary based on governmental efficiency and the completeness of submitted 
+              documentation, Bezaleel Consultants strives to make the process as swift as possible.
             </p>
+            <div className="bg-emerald-50 rounded-lg p-6 border border-emerald-200 max-w-3xl mx-auto">
+              <h3 className="text-lg font-bold text-bezaleel-dark mb-2">
+                Total Estimated Setup Time with Bezaleel Consultants' Support:
+              </h3>
+              <p className="text-muted-foreground">
+                While individual steps are quick, a complete setup from initial consultation to a fully operational 
+                company with a bank account can range from <strong>1-2 weeks</strong>, depending on the promptness 
+                of client document submission and regulatory processing queues. We keep you informed at every stage.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {timeline.map((phase, index) => (
-              <Card key={index} className="text-center hover-lift border-2 border-transparent hover:border-emerald-200 transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg shadow-lg">
-                    {index + 1}
-                  </div>
-                  <CardTitle className="text-lg font-bold text-bezaleel-dark">
-                    {phase.phase}
-                  </CardTitle>
-                  <div className="text-2xl font-bold text-emerald-600">
-                    {phase.duration}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">
-                    {phase.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            <Card className="text-center hover-lift border-2 border-transparent hover:border-emerald-200 transition-all duration-300">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg shadow-lg">
+                  1
+                </div>
+                <CardTitle className="text-lg font-bold text-bezaleel-dark">
+                  Company Name Reservation
+                </CardTitle>
+                <div className="text-2xl font-bold text-emerald-600">
+                  48 Hours
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground">
+                  Typically completed within 48 hours with PACRA
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-lift border-2 border-transparent hover:border-emerald-200 transition-all duration-300">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg shadow-lg">
+                  2
+                </div>
+                <CardTitle className="text-lg font-bold text-bezaleel-dark">
+                  Company Incorporation
+                </CardTitle>
+                <div className="text-2xl font-bold text-emerald-600">
+                  1-3 Days
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground">
+                  Once all documentation is correctly prepared and submitted to receive Certificate of Incorporation
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-lift border-2 border-transparent hover:border-emerald-200 transition-all duration-300">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg shadow-lg">
+                  3
+                </div>
+                <CardTitle className="text-lg font-bold text-bezaleel-dark">
+                  Tax Registration (TPIN)
+                </CardTitle>
+                <div className="text-2xl font-bold text-emerald-600">
+                  Few Days
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground">
+                  TPIN often automatically generated upon PACRA registration. Other tax types follow immediately
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-lift border-2 border-transparent hover:border-emerald-200 transition-all duration-300">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg shadow-lg">
+                  4
+                </div>
+                <CardTitle className="text-lg font-bold text-bezaleel-dark">
+                  Corporate Bank Account
+                </CardTitle>
+                <div className="text-2xl font-bold text-emerald-600">
+                  7 Days
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground">
+                  After incorporation and TPIN acquisition, depending on bank's KYC and compliance procedures
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
