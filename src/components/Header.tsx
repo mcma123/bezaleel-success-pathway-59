@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -31,7 +30,7 @@ const Header = () => {
   ];
 
   // WhatsApp configuration
-  const phoneNumber = "26377251527"; // WhatsApp API number without + and spaces
+  const phoneNumber = "263772515272"; // WhatsApp API number without + and spaces
   const message = "Hello! I'm interested in getting started with your business services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

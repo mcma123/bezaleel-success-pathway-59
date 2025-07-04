@@ -33,7 +33,7 @@ const CountryServices = () => {
   ];
 
   // WhatsApp configuration
-  const phoneNumber = "26377251527"; // WhatsApp API number without + and spaces
+  const phoneNumber = "263772515272"; // WhatsApp API number without + and spaces
   const requestMessage = "Hello! I'm interested in requesting services for a new country not currently listed.";
   const consultationMessage = "Hello! I'd like to schedule a consultation for business setup services.";
   const requestWhatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(requestMessage)}`;
