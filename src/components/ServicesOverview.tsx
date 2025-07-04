@@ -14,7 +14,7 @@ const ServicesOverview = () => {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
       title: "Corporate Bank Account Services",
       description: "Streamline your financial operations with our expert corporate bank account opening services in South Africa and Zambia. Our team will guide you through the process, ensuring a smooth and efficient experience.",
-      link: "/services/banking-finance"
+      link: "/services"
     },
     {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
@@ -72,8 +72,8 @@ const ServicesOverview = () => {
               </Card>
             );
 
-            // Wrap first three cards (Company Incorporation, Corporate Bank Account Services, and Legal Compliance) with Link
-            if (index === 0 || index === 1 || index === 3) {
+            // Wrap cards with Link except for Digital Presence which has no link
+            if (service.link !== "#") {
               return (
                 <Link key={service.title} to={service.link}>
                   {ServiceCard}

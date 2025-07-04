@@ -22,7 +22,6 @@ const Header = () => {
   ];
 
   const servicesByCategory = [
-    { name: 'Corporate Bank Account Services', href: '/services/banking-finance' },
     { name: 'Legal Compliance', href: '/services/legal-compliance' },
   ];
 
@@ -30,6 +29,11 @@ const Header = () => {
     { name: 'South Africa', href: '/services/south-africa' },
     { name: 'Zambia', href: '/services/zambia' },
   ];
+
+  // WhatsApp configuration
+  const phoneNumber = "26377251527"; // WhatsApp API number without + and spaces
+  const message = "Hello! I'm interested in getting started with your business services.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -101,9 +105,15 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button className="bezaleel-gradient text-white ripple-effect">
-              Get Started
-            </Button>
+            <a 
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bezaleel-gradient text-white ripple-effect">
+                Get Started
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -164,9 +174,15 @@ const Header = () => {
 
               {/* Mobile CTA */}
               <div className="pt-4">
-                <Button className="bezaleel-gradient text-white ripple-effect w-full">
-                  Get Started
-                </Button>
+                <a 
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bezaleel-gradient text-white ripple-effect w-full">
+                    Get Started
+                  </Button>
+                </a>
               </div>
             </nav>
           </div>
