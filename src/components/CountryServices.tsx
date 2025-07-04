@@ -32,13 +32,20 @@ const CountryServices = () => {
     }
   ];
 
+  // WhatsApp configuration
+  const phoneNumber = "26377251527"; // WhatsApp API number without + and spaces
+  const requestMessage = "Hello! I'm interested in requesting services for a new country not currently listed.";
+  const consultationMessage = "Hello! I'd like to schedule a consultation for business setup services.";
+  const requestWhatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(requestMessage)}`;
+  const consultationWhatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(consultationMessage)}`;
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-bezaleel-accent/10 text-bezaleel-accent hover:bg-bezaleel-accent hover:text-white">
-            Country Services
+            Jurisdictions
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-bezaleel-dark mb-6">
             Business Setup Across Africa
@@ -150,20 +157,32 @@ const CountryServices = () => {
                 Contact us to discuss your business setup needs in other countries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg"
-                  variant="secondary" 
-                  className="bg-white text-bezaleel-red hover:bg-white/90"
+                <a 
+                  href={requestWhatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Request New Country
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-bezaleel-red"
+                  <Button 
+                    size="lg"
+                    variant="secondary" 
+                    className="bg-white text-bezaleel-red hover:bg-white/90"
+                  >
+                    Request New Country
+                  </Button>
+                </a>
+                <a 
+                  href={consultationWhatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Schedule Consultation
-                </Button>
+                  <Button 
+                    size="lg"
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-bezaleel-red"
+                  >
+                    Schedule Consultation
+                  </Button>
+                </a>
               </div>
             </CardContent>
           </Card>
