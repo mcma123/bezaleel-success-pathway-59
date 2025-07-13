@@ -157,10 +157,10 @@ const Services = () => {
       <section className="py-20 bg-gradient-to-r from-bezaleel-red to-bezaleel-accent">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Start Your African Business Journey?
+            Ready to Confidently Launch Your Business in South Africa or Zambia?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact us today for a free consultation and let us help you choose the best country for your business expansion.
+            Get in touch with us today to explore tailored solutions and expert guidance. Our dedicated team will help you confidently navigate these vibrant markets, ensuring your business thrives.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-bezaleel-red hover:bg-gray-100 font-semibold px-8 py-3">
