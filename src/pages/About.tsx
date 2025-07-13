@@ -4,45 +4,54 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Users, Target, Award, Globe, Heart, Lightbulb } from 'lucide-react';
+import { Target, Award, Users, Heart, Lightbulb, Globe } from 'lucide-react';
 
 const About = () => {
-  const teamMembers = [
-    
-  ];
-
   const values = [
     {
-      icon: <Target className="h-8 w-8" />,
-      title: "Mission-Driven",
-      description: "Empowering African businesses through comprehensive solutions and digital innovation."
-    },
-    {
-      icon: <Heart className="h-8 w-8" />,
-      title: "Client-Focused",
-      description: "Putting our clients' success at the heart of everything we do, ensuring personalized service."
+      icon: <Award className="h-8 w-8" />,
+      title: "Expertise",
+      description: "We bring local knowledge and industry expertise to every project."
     },
     {
       icon: <Lightbulb className="h-8 w-8" />,
       title: "Innovation",
-      description: "Constantly evolving our services to meet the changing needs of modern businesses."
-    },
-    {
-      icon: <Award className="h-8 w-8" />,
-      title: "Excellence",
-      description: "Maintaining the highest standards in service delivery and professional expertise."
+      description: "We stay ahead of the curve, leveraging the latest insights and trends."
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: "Collaboration",
-      description: "Working closely with clients as partners in their business growth journey."
+      title: "Partnership",
+      description: "We collaborate closely with our clients, understanding their unique needs and goals."
     },
     {
-      icon: <Globe className="h-8 w-8" />,
-      title: "Pan-African Vision",
-      description: "Building bridges across African markets to foster continental business growth."
+      icon: <Heart className="h-8 w-8" />,
+      title: "Integrity",
+      description: "We operate with transparency, honesty, and professionalism."
     }
   ];
+
+  const whyChooseUs = [
+    {
+      icon: <Globe className="h-6 w-6" />,
+      title: "Local Expertise",
+      description: "We know the markets, regulations, and cultural nuances of South Africa and Zambia."
+    },
+    {
+      icon: <Target className="h-6 w-6" />,
+      title: "Tailored Solutions",
+      description: "Our services are designed to meet your specific business needs."
+    },
+    {
+      icon: <Users className="h-6 w-6" />,
+      title: "End-to-End Support",
+      description: "We're with you every step of the way, from setup to growth and beyond."
+    }
+  ];
+
+  // WhatsApp configuration
+  const phoneNumber = "263772515272";
+  const message = "Hello! I'm interested in learning more about Bezaleel Consultants services.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
@@ -56,48 +65,26 @@ const About = () => {
               About Bezaleel Consultants
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-bezaleel-dark mb-6">
-              Empowering African
-              <span className="block text-bezaleel-red">Business Excellence</span>
+              Empowering Business
+              <span className="block text-bezaleel-red">Success in Africa</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Since our founding, we've been dedicated to providing comprehensive business solutions that help entrepreneurs and companies thrive across South Africa, Zambia, and Zimbabwe.
+              At Bezaleel Consultants, we're passionate about empowering businesses to succeed in the vibrant markets of South Africa and Zambia. With our expertise and local knowledge, we provide tailored solutions and expert guidance to help you navigate the complexities of market entry and expansion.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Our Story Section */}
+      {/* Mission Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-                Our Story
-              </h2>
-              <p className="text-muted-foreground mb-6 text-lg">
-                Bezaleel Consultants was born from a simple yet powerful vision: to democratize business opportunities across Africa by making company registration, legal compliance, and digital transformation accessible to everyone.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Founded by a team of experienced business professionals and technology experts, we recognized the challenges that entrepreneurs face when starting and scaling their businesses in African markets. Complex regulations, lengthy processes, and limited access to modern business tools were holding back innovation and growth.
-              </p>
-              <p className="text-muted-foreground mb-8">
-                Today, we're proud to have helped over 500 companies establish their presence across multiple African countries, while also developing cutting-edge technology solutions that drive business efficiency and growth.
-              </p>
-              <Button className="bezaleel-gradient text-white px-8 py-3 hover:scale-105 transition-transform duration-300">
-                Start Your Journey
-              </Button>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop"
-                alt="Team collaboration"
-                className="rounded-lg shadow-lg"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-bezaleel-red text-white p-6 rounded-lg">
-                <div className="text-2xl font-bold">500+</div>
-                <div className="text-sm">Companies Served</div>
-              </div>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              Our Mission
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Our mission is to deliver seamless and efficient business setup experiences, fostering growth and success for our clients in these dynamic markets. We believe in building lasting relationships, driving innovation, and exceeding expectations.
+            </p>
           </div>
         </div>
       </section>
@@ -107,14 +94,14 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Our Core Values
+              Our Values
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               These principles guide everything we do and shape how we serve our clients across Africa.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="hover-lift border-2 border-transparent hover:border-bezaleel-red/20 transition-all duration-300 bg-card">
                 <CardHeader className="text-center">
@@ -136,31 +123,30 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Why Choose Us Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              Why Choose Us?
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="hover-lift transition-all duration-300 overflow-hidden bg-card">
-                <CardHeader className="text-center p-0">
-                  <div className="w-full h-64 overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {whyChooseUs.map((item, index) => (
+              <Card key={index} className="hover-lift transition-all duration-300 bg-card text-center">
+                <CardHeader>
+                  <div className="mx-auto w-12 h-12 bg-bezaleel-red/10 rounded-full flex items-center justify-center mb-4">
+                    <div className="text-bezaleel-red">
+                      {item.icon}
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <CardTitle className="text-xl font-bold text-bezaleel-dark mb-1">
-                      {member.name}
-                    </CardTitle>
-                    <p className="text-bezaleel-red font-medium mb-3">{member.role}</p>
-                    <CardDescription className="text-muted-foreground text-sm">
-                      {member.description}
-                    </CardDescription>
-                  </div>
+                  <CardTitle className="text-lg font-bold text-bezaleel-dark mb-2">
+                    {item.title}
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    {item.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -172,17 +158,19 @@ const About = () => {
       <section className="py-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
+            Get in Touch
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join hundreds of successful businesses that have trusted Bezaleel Consultants with their growth journey.
+            Ready to unlock new opportunities? Contact us today to learn more about how Bezaleel Consultants can support your business expansion in South Africa and Zambia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-bezaleel-red hover:bg-gray-100 font-semibold px-8 py-3">
-              Get Started Today
-            </Button>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-white text-bezaleel-red hover:bg-gray-100 font-semibold px-8 py-3">
+                Contact Us Today
+              </Button>
+            </a>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bezaleel-red font-semibold px-8 py-3">
-              Contact Our Team
+              Learn More
             </Button>
           </div>
         </div>
