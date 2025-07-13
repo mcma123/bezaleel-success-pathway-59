@@ -13,7 +13,7 @@ const Services = () => {
       id: 'south-africa',
       name: 'South Africa',
       flag: '🇿🇦',
-      description: 'Register your company in Africa\'s most developed economy with seamless CIPC registration',
+      description: 'Bezaleel Consultants offers comprehensive support, from seamless company registration and corporate bank account opening to expert accounting and tax services. Let us help you tap into South Africa\'s growth.',
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&h=600&fit=crop',
       link: '/services/south-africa',
       services: [
@@ -34,7 +34,7 @@ const Services = () => {
       id: 'zambia',
       name: 'Zambia',
       flag: '🇿🇲',
-      description: 'Establish your business in the heart of Africa with PACRA registration and comprehensive support',
+      description: 'Bezaleel Consultants supports your journey with comprehensive services: company registration, corporate bank account setup, and reliable accounting & tax solutions. Let\'s build your success in Zambia.',
       image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=600&fit=crop',
       link: '/services/zambia',
       services: [
@@ -129,16 +129,6 @@ const Services = () => {
                 </CardHeader>
                 
                 <CardContent className="space-y-4">
-                  {/* Timeline */}
-                  <div className="bg-bezaleel-red/5 rounded-lg p-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-bezaleel-dark">Registration Timeline:</span>
-                      <Badge className="bg-bezaleel-red text-white">
-                        {country.timeline}
-                      </Badge>
-                    </div>
-                  </div>
-
                   {/* CTA Button */}
                   <Link to={country.link} className="block">
                     <Button className="w-full bg-bezaleel-red text-white hover:bg-bezaleel-accent font-semibold py-3 group">
