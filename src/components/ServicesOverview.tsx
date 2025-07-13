@@ -17,16 +17,16 @@ const ServicesOverview = () => {
       link: "/services"
     },
     {
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+      title: "Compliance Services",
+      description: "Compliance made easy. Our team of experts will guide you through regulatory requirements, ensuring your business operates smoothly and within the law.",
+      link: "/services/legal-compliance"
+    },
+    {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
       title: "Digital Presence",
       description: "At Bezaleel Consultants, we deliver smart digital solutions—from web development and e-commerce to accounting, HR, and ERP systems and all types of business systems designed to streamline operations and drive business growth.",
       link: "#"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-      title: "Legal Compliance",
-      description: "Compliance made easy. Our team of experts will guide you through regulatory requirements, ensuring your business operates smoothly and within the law.",
-      link: "/services/legal-compliance"
     }
   ];
 
