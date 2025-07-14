@@ -12,10 +12,11 @@ const CountryServices = () => {
       name: "South Africa",
       flag: "🇿🇦",
       description: "Complete business setup and digital transformation services",
-      stats: {
-        companies: "2500+",
-        satisfaction: "98%",
-        timeToSetup: "14 days"
+      details: {
+        companyRegistration: "7 days",
+        bankAccount: "3 days",
+        localDirector: "No",
+        travelRequired: "No"
       },
       color: "from-green-500 to-yellow-500"
     },
@@ -23,10 +24,11 @@ const CountryServices = () => {
       name: "Zambia",
       flag: "🇿🇲",
       description: "Professional business registration and compliance services",
-      stats: {
-        companies: "2000+",
-        satisfaction: "96%",
-        timeToSetup: "14 days"
+      details: {
+        companyRegistration: "7 days",
+        bankAccount: "3 days",
+        localDirector: "No",
+        travelRequired: "No"
       },
       color: "from-blue-500 to-green-500"
     }
@@ -87,28 +89,23 @@ const CountryServices = () => {
                     <MapPin className="w-8 h-8 text-bezaleel-red" />
                   </div>
 
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="text-center">
-                      <div className="flex items-center justify-center mb-2">
-                        <Users className="w-5 h-5 text-bezaleel-red mr-1" />
-                      </div>
-                      <div className="text-lg font-bold text-bezaleel-dark">{country.stats.companies}</div>
-                      <div className="text-xs text-gray-500">Companies</div>
+                  {/* Business Setup Details */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                      <span className="text-sm font-medium text-bezaleel-dark">Company Registration</span>
+                      <span className="text-sm font-bold text-bezaleel-red">{country.details.companyRegistration}</span>
                     </div>
-                    <div className="text-center">
-                      <div className="flex items-center justify-center mb-2">
-                        <Award className="w-5 h-5 text-bezaleel-red mr-1" />
-                      </div>
-                      <div className="text-lg font-bold text-bezaleel-dark">{country.stats.satisfaction}</div>
-                      <div className="text-xs text-gray-500">Satisfaction</div>
+                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                      <span className="text-sm font-medium text-bezaleel-dark">Bank Account</span>
+                      <span className="text-sm font-bold text-bezaleel-red">{country.details.bankAccount}</span>
                     </div>
-                    <div className="text-center">
-                      <div className="flex items-center justify-center mb-2">
-                        <TrendingUp className="w-5 h-5 text-bezaleel-red mr-1" />
-                      </div>
-                      <div className="text-lg font-bold text-bezaleel-dark">{country.stats.timeToSetup}</div>
-                      <div className="text-xs text-gray-500">Setup Time</div>
+                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                      <span className="text-sm font-medium text-bezaleel-dark">Local Director?</span>
+                      <span className="text-sm font-bold text-bezaleel-red">{country.details.localDirector}</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                      <span className="text-sm font-medium text-bezaleel-dark">Travel Required?</span>
+                      <span className="text-sm font-bold text-bezaleel-red">{country.details.travelRequired}</span>
                     </div>
                   </div>
                 </div>
