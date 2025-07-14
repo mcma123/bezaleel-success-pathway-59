@@ -75,10 +75,10 @@ const Services = () => {
               Business Services
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Business Registration & Support Services
+              Business Setup Simplified
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Choose your preferred country for company registration and comprehensive business support across Africa.
+              We offer an integrated suite of services designed to support the initial establishment of your business in South Africa and Zambia. This includes expert handling of company registration, tax obligations, and the setup of corporate banking relationships, providing the necessary foundation for your market entry.
             </p>
           </div>
         </div>
@@ -92,8 +92,7 @@ const Services = () => {
               Select Your Business Destination
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We provide comprehensive business registration and support services in both South Africa and Zambia, 
-              each offering unique advantages for your business expansion.
+              Achieve your business goals with our customized solutions
             </p>
           </div>
 
