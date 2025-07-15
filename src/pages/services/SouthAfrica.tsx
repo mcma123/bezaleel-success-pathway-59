@@ -479,25 +479,6 @@ const SouthAfrica = () => {
               </div>
             </Card>
 
-            {/* Audit Requirements Section */}
-            <Card className="p-8 border-2 border-bezaleel-red/10 shadow-xl mb-8">
-              <h3 className="text-2xl font-bold text-bezaleel-dark mb-6">Evolving Audit Requirements</h3>
-              <div className="text-left space-y-4">
-                <p className="text-muted-foreground">
-                  Under the Companies Act 2008, a mandatory statutory audit, regulated by the Independent Regulatory Board for Auditors (IRBA), is applicable to locally incorporated companies if they meet specific new regulatory requirements. For instance:
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-bezaleel-red rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Companies that hold more than ZAR 5 million worth of assets in a fiduciary capacity for unrelated persons, as part of their primary activities in a financial year, will be required to have an audit.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-bezaleel-red rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Additionally, a company with a Public Interest Score exceeding 350 in a financial year is also mandated to have an audit. This score is calculated based on factors like employee numbers, turnover, third-party liabilities, and beneficial shareholders, ensuring increased transparency and accountability for entities with significant public impact.</span>
-                  </li>
-                </ul>
-              </div>
-            </Card>
 
             {/* No Minimum Capital Section */}
             <Card className="p-8 border-2 border-bezaleel-red/10 shadow-xl mb-8">
@@ -507,12 +488,6 @@ const SouthAfrica = () => {
               </p>
             </Card>
 
-            {/* Bezaleel Consultants Advantage */}
-            <Card className="p-8 border-2 border-bezaleel-red/10 shadow-xl bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
-              <p className="text-muted-foreground text-center">
-                <strong>At Bezaleel Consultants,</strong> we specialize in advising foreign investors on the steps and requirements for seamless company registration in South Africa, helping you navigate the process efficiently and compliantly, and ensuring you understand all relevant tax and audit obligations.
-              </p>
-            </Card>
           </div>
         </div>
       </section>
