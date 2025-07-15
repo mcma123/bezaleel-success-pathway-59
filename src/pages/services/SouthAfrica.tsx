@@ -149,72 +149,6 @@ const SouthAfrica = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
-              <Clock className="w-4 h-4 mr-2" />
-              Timeline
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              How Quickly Can You Start Your Business in South Africa with Bezaleel Consultants?
-            </h2>
-            <div className="max-w-4xl mx-auto text-left space-y-6">
-              <p className="text-xl text-muted-foreground">
-                At Bezaleel Consultants, we streamline the entire process of setting up your company and securing a business bank account in South Africa, making it as seamless and stress-free as possible.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Once we receive the necessary documents from your directors and shareholders, we'll immediately begin a name availability search for your preferred company name. The entire registration can be done remotely, so there's no need for you to travel to South Africa.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                You can expect to receive your South Africa company tax number and digital copies of your core company documents—like the Company Registration Certificate, Notice of Incorporation, and Memorandum of Incorporation (MOI)—all within 7 days.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                After your company is successfully registered, we'll expertly guide you through opening a corporate bank account with a local South African bank. This step, especially for non-residents, typically takes just around 3 additional days.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                This means you can anticipate being ready to start operations and issue invoices with your new South African company within just 2 weeks of partnering with Bezaleel Consultants.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Beyond the initial setup, our team of Chartered Accountants is here to ensure your newly established company always meets the financial and regulatory standards set by the South African Revenue Service (SARS). We provide comprehensive monthly bookkeeping, prepare your financial statements, and handle your annual tax return filings, allowing you to maintain full compliance with ease.
-              </p>
-            </div>
-          </div>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl text-center group hover-lift">
-                <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-3xl font-bold text-white">7</span>
-                </div>
-                <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Days</h3>
-                <p className="text-muted-foreground">Company registration & tax number</p>
-                <p className="text-sm text-muted-foreground mt-2">Digital copies of core company documents</p>
-              </Card>
-              
-              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl text-center group hover-lift">
-                <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-3xl font-bold text-white">3</span>
-                </div>
-                <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Days</h3>
-                <p className="text-muted-foreground">Corporate bank account opening</p>
-                <p className="text-sm text-muted-foreground mt-2">For non-residents</p>
-              </Card>
-              
-              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl text-center group hover-lift">
-                <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-3xl font-bold text-white">2</span>
-                </div>
-                <h3 className="font-bold text-bezaleel-dark mb-2 text-lg">Weeks</h3>
-                <p className="text-muted-foreground">Ready to start operations</p>
-                <p className="text-sm text-muted-foreground mt-2">Issue invoices with your new company</p>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Registration Steps */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -263,6 +197,76 @@ const SouthAfrica = () => {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Setup Timeline Section */}
+      <section className="py-20 bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-bezaleel-red/10 text-bezaleel-red">
+              <Clock className="w-4 h-4 mr-2" />
+              Setup Timeline
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
+              Setup Timeline
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl hover-lift">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-bezaleel-red text-white rounded-full flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">Document submission</h3>
+                    <p className="text-muted-foreground">You provide necessary documents to Bezaleel Consultants.</p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl hover-lift">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-bezaleel-red text-white rounded-full flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">Company registration: 7 days to receive</h3>
+                    <ul className="text-muted-foreground space-y-1 ml-4">
+                      <li>• Company tax number</li>
+                      <li>• Digital copies of core company documents (e.g., Company Registration Certificate, Notice of Incorporation, MOI)</li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl hover-lift">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-bezaleel-red text-white rounded-full flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">Bank account opening</h3>
+                    <p className="text-muted-foreground">3 additional days (approx.)</p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl hover-lift bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-bezaleel-red text-white rounded-full flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">Total setup time</h3>
+                    <p className="text-muted-foreground">Approximately 2 weeks</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
