@@ -47,10 +47,10 @@ const CountryServices = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-bezaleel-dark mb-6">
-            Business Setup Across Africa
+            Select Your Market
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Establish your business confidently in South Africa or Zambia with our expert team. We provide the strategies and support to move beyond struggle to significant growth.
+            Select the jurisdiction where you'd like to establish or expand your business
           </p>
         </div>
 

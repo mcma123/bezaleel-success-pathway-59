@@ -215,6 +215,15 @@ const SouthAfrica = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-bezaleel-dark mb-4 text-center">
+                Start Your South African Business in Just 2 Weeks with Bezaleel Consultants
+              </h3>
+              <p className="text-lg text-muted-foreground text-center mb-8">
+                We'll make setting up your South African company and securing a business bank account seamless and stress-free. Here's how we'll get it done:
+              </p>
+            </div>
+            
             <div className="space-y-6">
               <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl hover-lift">
                 <div className="flex items-start">
@@ -222,8 +231,8 @@ const SouthAfrica = () => {
                     1
                   </div>
                   <div>
-                    <h3 className="font-bold text-bezaleel-dark mb-2">Document submission</h3>
-                    <p className="text-muted-foreground">You provide necessary documents to Bezaleel Consultants.</p>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">We Collect Your Documents</h3>
+                    <p className="text-muted-foreground">We'll gather the necessary documents from you, our valued client.</p>
                   </div>
                 </div>
               </Card>
@@ -234,11 +243,8 @@ const SouthAfrica = () => {
                     2
                   </div>
                   <div>
-                    <h3 className="font-bold text-bezaleel-dark mb-2">Company registration: 7 days to receive</h3>
-                    <ul className="text-muted-foreground space-y-1 ml-4">
-                      <li>• Company tax number</li>
-                      <li>• Digital copies of core company documents (e.g., Company Registration Certificate, Notice of Incorporation, MOI)</li>
-                    </ul>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">We Conduct a Company Name Search</h3>
+                    <p className="text-muted-foreground">We'll verify the availability of your preferred company name.</p>
                   </div>
                 </div>
               </Card>
@@ -249,8 +255,37 @@ const SouthAfrica = () => {
                     3
                   </div>
                   <div>
-                    <h3 className="font-bold text-bezaleel-dark mb-2">Bank account opening</h3>
-                    <p className="text-muted-foreground">3 additional days (approx.)</p>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">We Complete Your Registration (Remotely)</h3>
+                    <p className="text-muted-foreground">We'll handle the company registration process efficiently, without requiring your physical presence.</p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl hover-lift">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-bezaleel-red text-white rounded-full flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">You Receive Your Digital Documents (within 7 days)</h3>
+                    <ul className="text-muted-foreground space-y-2 ml-2">
+                      <li>• Company Registration Certificate (CoR 14.3)</li>
+                      <li>• Notice of Incorporation (CoR 14.1)</li>
+                      <li>• Memorandum of Incorporation (MOI) (CoR 15.1 forms)</li>
+                      <li>• Company Income Tax Number (SARS Registration)</li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl hover-lift">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-bezaleel-red text-white rounded-full flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    5
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">We Set Up Your Corporate Bank Account (3 additional days)</h3>
+                    <p className="text-muted-foreground">We'll expertly guide you through opening a local South African bank account for your company.</p>
                   </div>
                 </div>
               </Card>
@@ -258,11 +293,11 @@ const SouthAfrica = () => {
               <Card className="p-6 border-2 border-bezaleel-red/10 shadow-xl hover-lift bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
                 <div className="flex items-start">
                   <div className="w-10 h-10 bg-bezaleel-red text-white rounded-full flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                    4
+                    ⏱️
                   </div>
                   <div>
-                    <h3 className="font-bold text-bezaleel-dark mb-2">Total setup time</h3>
-                    <p className="text-muted-foreground">Approximately 2 weeks</p>
+                    <h3 className="font-bold text-bezaleel-dark mb-2">Total Estimated Time</h3>
+                    <p className="text-lg font-semibold text-bezaleel-red">2 weeks</p>
                   </div>
                 </div>
               </Card>
@@ -293,11 +328,11 @@ const SouthAfrica = () => {
                 <div>
                   <h3 className="text-2xl font-bold text-bezaleel-dark mb-4">Expert Assistance</h3>
                   <p className="text-muted-foreground mb-6">
-                    Bezaleel Consultants provides expert assistance to make this crucial step effortless. We help you prepare all required documentation and liaise directly with leading local banks on your behalf.
+                    Bezaleel Consultants provides expert assistance to make this crucial step effortless. We help you prepare all required documentation and liaise directly with a local South African bank on your behalf.
                   </p>
                   <div className="flex items-center text-bezaleel-red mb-4">
                     <Clock className="w-5 h-5 mr-3" />
-                    <span className="font-semibold">For non-resident directors, this vital process is often concluded in as little as 3 days</span>
+                    <span className="font-semibold">For non-resident directors, this process is often concluded in as little as 3 days, efficiently setting up your company for immediate financial operations.</span>
                   </div>
                 </div>
                 

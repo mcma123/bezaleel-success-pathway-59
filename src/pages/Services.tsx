@@ -72,13 +72,13 @@ const Services = () => {
           <div className="text-center max-w-4xl mx-auto text-white">
             <Badge className="mb-6 bg-bezaleel-red/90 text-white hover:bg-bezaleel-red border-0">
               <Building className="w-4 h-4 mr-2" />
-              Business Services
+              Select Your Market
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Business Setup Simplified
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              We offer an integrated suite of services designed to support the initial establishment of your business in South Africa and Zambia. This includes expert handling of company registration, tax obligations, and the setup of corporate banking relationships, providing the necessary foundation for your market entry.
+              Our expert services provide a seamless foundation for businesses entering the South African and Zambian markets. From company registration to tax compliance and corporate banking setup, we offer comprehensive support to get your business up and running efficiently.
             </p>
           </div>
         </div>
@@ -89,10 +89,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Select Your Business Destination
+              Choose Your Jurisdiction
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Achieve your business goals with our customized solutions
+              Discover how we can support your business in these markets
             </p>
           </div>
 

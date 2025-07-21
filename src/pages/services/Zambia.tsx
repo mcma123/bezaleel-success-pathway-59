@@ -244,11 +244,11 @@ const Zambia = () => {
               </Badge>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-bezaleel-dark mb-8">
-              Register Your Company in 
+              Register Company in 
               <span className="block text-emerald-600">Zambia</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed">
-              Starting a business in Zambia? Get your comprehensive guide to company registration with expert support from Bezaleel Consultants.
+              Your Seamless Path to Company Registration in Zambia
             </p>
             <Button size="lg" className="bezaleel-gradient text-white hover:scale-105 transition-all duration-300 text-lg px-8 py-4">
               Start Registration Process
@@ -265,36 +265,15 @@ const Zambia = () => {
               <Building className="w-4 h-4 mr-2" />
               Company Registration Guide
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Starting a Business in Zambia: Your Comprehensive Guide to Company Registration
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6 text-center">
+              Starting a Business in Zambia
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
-              Embarking on your entrepreneurial journey in Zambia? The first crucial step is registering your company. 
-              This comprehensive guide will walk you through the entire company registration process, from choosing the right 
-              business structure and securing a company name to filing the necessary documents and obtaining the required licenses.
-            </p>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              Whether you're a local entrepreneur or a foreign investor, we'll provide you with the knowledge and resources 
-              to navigate the registration process smoothly and efficiently. We'll also highlight key considerations to ensure 
-              compliance with all relevant regulations.
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Embarking on your entrepreneurial journey in Zambia? The first crucial step is registering your company – and Bezaleel Consultants is here to make it seamless. With expert guidance for entrepreneurs and investors, we'll navigate Zambia's business landscape together. We'll walk you through the entire company registration process, from choosing the right business structure and securing your company name to expertly filing the necessary documents. Our team manages the complexities, providing knowledge and resources for a smooth and efficient registration. We'll ensure full compliance with relevant regulations, securing your strong start. Let's dive in and get you started!
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <Card className="mb-12 border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 to-white">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-bezaleel-dark flex items-center">
-                  <Building className="w-8 h-8 text-emerald-600 mr-3" />
-                  Establishing Your Business in Zambia
-                </CardTitle>
-                <CardDescription className="text-lg text-muted-foreground">
-                  Zambia presents a dynamic and increasingly attractive environment for business, offering strategic access 
-                  to the Southern African market. Successfully establishing and operating a business here requires a clear 
-                  understanding of local regulations and processes. Bezaleel Consultants offers end-to-end expertise to 
-                  ensure your venture's smooth launch and sustained growth in Zambia.
-                </CardDescription>
-              </CardHeader>
-            </Card>
 
             <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
               <CardHeader>
@@ -433,15 +412,6 @@ const Zambia = () => {
                     </div>
                     
                     <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="w-4 h-4 text-emerald-600 mt-1" />
-                        <div>
-                          <h5 className="font-semibold text-bezaleel-dark">Registered Office</h5>
-                          <p className="text-sm text-muted-foreground">
-                            We can facilitate the provision of a compliant registered office address in Zambia.
-                          </p>
-                        </div>
-                      </div>
                       
                       <div className="flex items-start space-x-3">
                         <CheckCircle className="w-4 h-4 text-emerald-600 mt-1" />
@@ -458,79 +428,6 @@ const Zambia = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Highlights */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Why Register Your Business in Zambia?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Zambia presents a dynamic and increasingly attractive environment for business, offering strategic access to the Southern African market
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {keyHighlights.map((highlight, index) => (
-              <Card key={index} className={`${highlight.color} border-2 hover-lift group transition-all duration-300`}>
-                <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-3 bg-white rounded-full group-hover:scale-110 transition-transform duration-300">
-                    {highlight.icon}
-                  </div>
-                  <CardTitle className="text-lg font-bold mb-2">
-                    {highlight.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-center leading-relaxed">
-                    {highlight.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Company Requirements */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">
-              Requirements & Structure
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Company Registration Requirements
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The most recommended legal entity for foreign investors is the Private Limited Company by Shares (LLC), offering flexibility and limited liability
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {requirements.map((req, index) => (
-              <Card key={index} className="group hover-lift border-2 border-transparent hover:border-emerald-200 transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-emerald-600 transition-colors duration-300">
-                    {req.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {req.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start text-sm text-muted-foreground">
-                        <CheckCircle className="w-4 h-4 text-emerald-500 mr-3 mt-0.5 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
