@@ -97,7 +97,7 @@ const About = () => {
               Our Values
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              These principles guide everything we do and shape how we serve our clients across Africa.
+              These principles guide everything we do and shape how we serve our clients, ensuring a consistent standard of excellence and unwavering commitment.
             </p>
           </div>
 

@@ -16,13 +16,11 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'About Bezaleel Consultants', href: '/about' },
+    { name: 'Get in Touch', href: '/contact' },
   ];
 
-  const servicesByCategory = [
-    { name: 'Legal Compliance', href: '/services/legal-compliance' },
-  ];
+  const servicesByCategory = [];
 
   const servicesByCountry = [
     { name: 'South Africa', href: '/services/south-africa' },
@@ -59,35 +57,15 @@ const Header = () => {
               </Link>
             ))}
             
-            {/* Services Dropdown */}
+            {/* Jurisdictions Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium">
-                  Services
+                  Jurisdictions
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 bg-white border border-gray-200 shadow-lg">
-                <DropdownMenuItem asChild>
-                  <Link 
-                    to="/services" 
-                    className="w-full text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200"
-                  >
-                    All Services
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                {servicesByCategory.map((service) => (
-                  <DropdownMenuItem key={service.name} asChild>
-                    <Link 
-                      to={service.href} 
-                      className="w-full text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200"
-                    >
-                      {service.name}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-                <DropdownMenuSeparator />
                 {servicesByCountry.map((country) => (
                   <DropdownMenuItem key={country.name} asChild>
                     <Link 
@@ -140,25 +118,11 @@ const Header = () => {
                 </Link>
               ))}
               
-              {/* Mobile Services Menu */}
+              {/* Mobile Jurisdictions Menu */}
               <div className="py-2">
-                <Link
-                  to="/services"
-                  className="text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  All Services
-                </Link>
-                {servicesByCategory.map((service) => (
-                  <Link
-                    key={service.name}
-                    to={service.href}
-                    className="text-bezaleel-dark hover:text-bezaleel-red transition-colors duration-200 font-medium block py-2 pl-4"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {service.name}
-                  </Link>
-                ))}
+                <span className="text-bezaleel-dark font-medium block py-2">
+                  Jurisdictions:
+                </span>
                 {servicesByCountry.map((country) => (
                   <Link
                     key={country.name}

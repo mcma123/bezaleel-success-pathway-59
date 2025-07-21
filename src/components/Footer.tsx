@@ -9,12 +9,10 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { name: "Company Registration", href: "/services/company-incorporation" },
-        { name: "Website Development", href: "/services/website-development" },
-        { name: "Digital Marketing", href: "/services/digital-marketing" },
-        { name: "Mobile Development", href: "/services/mobile-development" },
-        { name: "E-commerce", href: "/services/ecommerce" },
-        { name: "Business Services", href: "/services/business-services" }
+        { name: "Company Incorporation", href: "/services/company-incorporation" },
+        { name: "Corporate bank Account Services", href: "/services/banking-finance" },
+        { name: "Compliance Services", href: "/services/business-services" },
+        { name: "Digital Presence", href: "/services/website-development" }
       ]
     },
     {
@@ -55,7 +53,7 @@ const Footer = () => {
             </Link>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
-              At Bezaleel Consultants, we're your trusted partner for launching and growing a business in Southern Africa. From navigating company registration in South Africa and Zambia to setting up corporate bank accounts and handling tax obligations, we've got you covered. But we don't stop there - we also empower your business with digital transformation, ensuring you're not just compliant, but also poised for success and scalability from the start.
+              At Bezaleel Consultants, we're your trusted partner for launching and growing a business in South Africa and Zambia. From navigating company registration to setting up corporate bank accounts and handling tax obligations, we've got you covered. But we don't stop there - we also empower your business with digital transformation, ensuring you're not just compliant, but also poised for success and scalability from the start.
             </p>
 
             {/* Contact Info */}
@@ -66,7 +64,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-bezaleel-red flex-shrink-0" />
-                <span className="text-gray-300">+27744047218</span>
+                <span className="text-gray-300">+27651522302</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-bezaleel-red flex-shrink-0" />

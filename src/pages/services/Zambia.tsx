@@ -444,40 +444,18 @@ const Zambia = () => {
               2. Corporate Bank Account Opening Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
-              A fully operational corporate bank account is indispensable for managing your business finances, 
-              facilitating transactions, and adhering to financial regulations in Zambia. While the process can be 
-              detail-intensive, Bezaleel Consultants streamlines it for your convenience.
+              A fully operational corporate bank account is crucial for managing business finances, 
+              facilitating transactions, and adhering to financial regulations in Zambia. Bezaleel Consultants 
+              streamlines the process, ensuring a compliant and efficient setup despite complex KYC requirements and specific documentation.
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-              {bankAccountRequirements.map((req, index) => (
-                <Card key={index} className="group hover-lift border-2 border-transparent hover:border-blue-200 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-blue-600 transition-colors duration-300">
-                      {req.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      {req.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start text-sm text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
             <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-bezaleel-dark mb-4 flex items-center">
                   <Zap className="w-8 h-8 text-blue-600 mr-3" />
-                  How Bezaleel Consultants Can Help with Bank Account Opening
+                  How Bezaleel Consultants Ensures a Seamless Bank Account Opening:
                 </CardTitle>
               </CardHeader>
               
@@ -487,9 +465,9 @@ const Zambia = () => {
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
                       <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Bank Liaison</h5>
+                        <h5 className="font-semibold text-bezaleel-dark">Strategic Bank Liaison</h5>
                         <p className="text-sm text-muted-foreground">
-                          We act as your primary point of contact with a reputable local bank operating in Zambia.
+                          Primary point of contact with our partner bank in Zambia, leveraging established relationships.
                         </p>
                       </div>
                     </div>
@@ -497,10 +475,19 @@ const Zambia = () => {
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
                       <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Document Preparation & Vetting</h5>
+                        <h5 className="font-semibold text-bezaleel-dark">Expert Document Preparation & Vetting</h5>
                         <p className="text-sm text-muted-foreground">
-                          We guide you through the precise documentation required, assisting with preparation and 
-                          ensuring all forms are accurately completed to minimize delays.
+                          Precise guidance, meticulous preparation, and compliance with Zambian banking regulations to minimize delays and rejections.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
+                      <div>
+                        <h5 className="font-semibold text-bezaleel-dark">Navigating Complex KYC</h5>
+                        <p className="text-sm text-muted-foreground">
+                          Simplifying "Know Your Customer" and Anti-Money Laundering processes, ensuring effortless compliance.
                         </p>
                       </div>
                     </div>
@@ -510,9 +497,9 @@ const Zambia = () => {
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
                       <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Application Facilitation</h5>
+                        <h5 className="font-semibold text-bezaleel-dark">Proactive Application Facilitation</h5>
                         <p className="text-sm text-muted-foreground">
-                          We submit your application and follow up diligently, helping to navigate any queries from the bank.
+                          Diligent follow-up and active navigation of bank queries, keeping the process moving forward.
                         </p>
                       </div>
                     </div>
@@ -520,10 +507,9 @@ const Zambia = () => {
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
                       <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Streamlined Process</h5>
+                        <h5 className="font-semibold text-bezaleel-dark">Remote Process</h5>
                         <p className="text-sm text-muted-foreground">
-                          Our expertise ensures a more efficient and less burdensome experience in securing your 
-                          crucial corporate bank account.
+                          We handle the entire application process remotely, saving you time and hassle.
                         </p>
                       </div>
                     </div>
@@ -596,7 +582,7 @@ const Zambia = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground">
-                  Once all documentation is correctly prepared and submitted to receive Certificate of Incorporation
+                  Once all documentation is correctly prepared and submitted, the registration process can take approximately 1-3 business days** to receive the Certificate of Incorporation.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -610,12 +596,12 @@ const Zambia = () => {
                   Tax Registration (TPIN)
                 </CardTitle>
                 <div className="text-2xl font-bold text-emerald-600">
-                  Few Days
+                  7 Days
                 </div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground">
-                  TPIN often automatically generated upon PACRA registration. Other tax types follow immediately
+                  Your TPIN is often automatically generated by ZRA upon PACRA registration. Formalizing other tax types (VAT, PAYE) usually follows immediately and can take a few additional days to a week.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -629,12 +615,12 @@ const Zambia = () => {
                   Corporate Bank Account
                 </CardTitle>
                 <div className="text-2xl font-bold text-emerald-600">
-                  7 Days
+                  3 Days
                 </div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground">
-                  After incorporation and TPIN acquisition, depending on bank's KYC and compliance procedures
+                  After incorporation and TPIN acquisition, opening a bank account typically takes *3 days*, depending on the bank's internal KYC (Know Your Customer) and compliance procedures.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -663,36 +649,46 @@ const Zambia = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold text-bezaleel-dark mb-6">
-                Key Compliance Requirements
+                Ongoing Compliance Services
               </h3>
               <div className="space-y-6">
+                <p className="text-muted-foreground mb-6">
+                  Maintaining compliance with statutory requirements is crucial for businesses in Zambia. Bezaleel Consultants provides comprehensive support to ensure your company meets all regulatory obligations, including:
+                </p>
+                
                 <div className="flex items-start space-x-4">
                   <FileText className="h-6 w-6 text-emerald-500 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-bezaleel-dark mb-2">Annual Returns to PACRA</h4>
+                    <h4 className="font-semibold text-bezaleel-dark mb-2">Annual Returns</h4>
                     <p className="text-muted-foreground">
-                      Submit annual returns and financial statements to Patents and Companies Registration Agency
+                      We'll prepare and submit annual returns to the Patents and Companies Registration Agency (PACRA).
                     </p>
                   </div>
                 </div>
+                
+                <div className="flex items-start space-x-4">
+                  <FileText className="h-6 w-6 text-emerald-500 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-bezaleel-dark mb-2">Financial Statements</h4>
+                    <p className="text-muted-foreground">
+                      We'll prepare and submit financial statements to PACRA.
+                    </p>
+                  </div>
+                </div>
+                
                 <div className="flex items-start space-x-4">
                   <Calculator className="h-6 w-6 text-emerald-500 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-bezaleel-dark mb-2">Tax Compliance with ZRA</h4>
+                    <h4 className="font-semibold text-bezaleel-dark mb-2">Tax Compliance</h4>
                     <p className="text-muted-foreground">
-                      Comply with Zambia Revenue Authority requirements including tax payments and returns
+                      We'll ensure your business meets all tax requirements, including payment of taxes and submission of tax returns to the Zambia Revenue Authority (ZRA).
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <Users className="h-6 w-6 text-emerald-500 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-bezaleel-dark mb-2">Ongoing Expert Support</h4>
-                    <p className="text-muted-foreground">
-                      Continuous guidance and support to ensure regulatory compliance and business growth
-                    </p>
-                  </div>
-                </div>
+                
+                <p className="text-muted-foreground mt-6">
+                  Our expertise ensures your business remains compliant, avoiding potential penalties and reputational risks. Let us handle the complexities, so you can focus on growing your business.
+                </p>
               </div>
             </div>
             <div className="relative">
@@ -810,11 +806,8 @@ const Zambia = () => {
             Ready to Start Your Zambian Business Journey?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let Bezaleel Consultants guide you through the complete company registration process in Zambia. Focus on growing your business while we handle the rest.
+            Let Bezaleel Consultants guide you through every step of setting up and running your business in Zambia. From registration to compliance, we've got you covered. Focus on growing your business while we handle the rest.
           </p>
-          <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold px-8 py-3">
-            Get Free Consultation
-          </Button>
         </div>
       </section>
 
