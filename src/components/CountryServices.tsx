@@ -11,7 +11,7 @@ const CountryServices = () => {
     {
       name: "South Africa",
       flag: "🇿🇦",
-      description: "Complete business setup and digital transformation services",
+      description: "Establish your business confidently in South Africa with our expert team.",
       details: {
         companyRegistration: "7 days",
         bankAccount: "3 days",

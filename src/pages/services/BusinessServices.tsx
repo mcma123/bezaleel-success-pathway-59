@@ -13,7 +13,7 @@ const BusinessServices = () => {
       id: 'south-africa',
       name: 'South Africa',
       flag: '🇿🇦',
-      description: 'Register your company in Africa\'s most developed economy with seamless CIPC registration',
+      description: 'Unlock growth potential with expert support: seamless company registration, corporate bank account opening, and tailored accounting & tax services.',
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&h=600&fit=crop',
       link: '/services/south-africa',
       services: [
@@ -28,13 +28,13 @@ const BusinessServices = () => {
         'Advanced banking system',
         'Strong legal framework'
       ],
-      timeline: '14 Business Days'
+      timeline: '10 days'
     },
     {
       id: 'zambia',
       name: 'Zambia',
       flag: '🇿🇲',
-      description: 'Establish your business in the heart of Africa with PACRA registration and comprehensive support',
+      description: 'Seamlessly establish your business. Bezaleel Consultants provides full support for company registration, corporate bank account setup, and reliable accounting & tax solutions',
       image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=600&fit=crop',
       link: '/services/zambia',
       services: [
@@ -72,13 +72,13 @@ const BusinessServices = () => {
           <div className="text-center max-w-4xl mx-auto text-white">
             <Badge className="mb-6 bg-bezaleel-red/90 text-white hover:bg-bezaleel-red border-0">
               <Building className="w-4 h-4 mr-2" />
-              Business Services
+              Select Your Market
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Business Registration & Support Services
+              Business Setup Simplified
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Choose your preferred country for company registration and comprehensive business support across Africa.
+              Our expert services provide a seamless foundation for businesses entering the South African and Zambian markets. From company registration to tax compliance and corporate banking setup, we offer comprehensive support to get your business up and running efficiently.
             </p>
           </div>
         </div>
@@ -153,66 +153,66 @@ const BusinessServices = () => {
         </div>
       </section>
 
-      {/* Additional Services Overview */}
-      <section className="py-20 bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6">
-              Comprehensive Business Support
+      {/* Vision Section */}
+      <section className="py-20 bg-gradient-to-br from-bezaleel-red/5 to-bezaleel-accent/5 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-bezaleel-red/10 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 bg-bezaleel-accent/10 rounded-full animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-gradient-to-r from-bezaleel-red/5 to-bezaleel-accent/5 rounded-full animate-pulse transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-bezaleel-dark mb-6 animate-bounce-in">
+              Unlocking Potential, Driving Success. Empowering Businesses
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Beyond registration, we provide ongoing support to ensure your business thrives in the African market.
-            </p>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Our vision is to empower businesses to thrive in the vibrant markets of South Africa 🇿🇦 and Zambia 🇿🇲, 
+                unlocking their full potential and driving growth across the African continent.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center hover-lift">
-              <CardHeader>
-                <div className="w-16 h-16 bg-bezaleel-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building className="w-8 h-8 text-bezaleel-red" />
-                </div>
-                <CardTitle className="text-xl font-bold text-bezaleel-dark">
-                  Registration & Compliance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Complete business registration, tax setup, and ongoing compliance management.
-                </CardDescription>
-              </CardContent>
-            </Card>
+          {/* Animated Visual Elements */}
+          <div className="flex justify-center items-center space-x-8 mb-12">
+            <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 animate-pulse-glow">
+                <TrendingUp className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-bezaleel-dark">Growth</h3>
+            </div>
+            
+            <div className="text-6xl animate-bounce text-bezaleel-red">→</div>
+            
+            <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-accent to-bezaleel-red rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 animate-pulse-glow">
+                <Building className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-bezaleel-dark">Success</h3>
+            </div>
+            
+            <div className="text-6xl animate-bounce text-bezaleel-red" style={{ animationDelay: '0.2s' }}>→</div>
+            
+            <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <div className="w-20 h-20 bg-gradient-to-br from-bezaleel-red to-bezaleel-accent rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 animate-pulse-glow">
+                <Users className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-bezaleel-dark">Empowerment</h3>
+            </div>
+          </div>
 
-            <Card className="text-center hover-lift">
-              <CardHeader>
-                <div className="w-16 h-16 bg-bezaleel-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-bezaleel-red" />
-                </div>
-                <CardTitle className="text-xl font-bold text-bezaleel-dark">
-                  Banking & Finance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Corporate banking setup, financial planning, and investment advisory services.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover-lift">
-              <CardHeader>
-                <div className="w-16 h-16 bg-bezaleel-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-bezaleel-red" />
-                </div>
-                <CardTitle className="text-xl font-bold text-bezaleel-dark">
-                  Business Support
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Virtual office services, business consulting, and ongoing operational support.
-                </CardDescription>
-              </CardContent>
-            </Card>
+          {/* Flag Animation */}
+          <div className="flex justify-center space-x-12 mb-8">
+            <div className="text-center animate-fade-in-up hover:scale-110 transition-transform duration-300" style={{ animationDelay: '0.8s' }}>
+              <div className="text-6xl mb-2 animate-bounce">🇿🇦</div>
+              <p className="text-bezaleel-dark font-semibold">South Africa</p>
+            </div>
+            <div className="text-center animate-fade-in-up hover:scale-110 transition-transform duration-300" style={{ animationDelay: '1s' }}>
+              <div className="text-6xl mb-2 animate-bounce" style={{ animationDelay: '0.3s' }}>🇿🇲</div>
+              <p className="text-bezaleel-dark font-semibold">Zambia</p>
+            </div>
           </div>
         </div>
       </section>
@@ -221,19 +221,11 @@ const BusinessServices = () => {
       <section className="py-20 bg-gradient-to-r from-bezaleel-red to-bezaleel-accent">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Start Your African Business Journey?
+            Ready to Confidently Launch Your Business in South Africa or Zambia?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact us today for a free consultation and let us help you choose the best country for your business expansion.
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Get in touch with us today to explore tailored solutions and expert guidance. Our dedicated team will help you confidently navigate these vibrant markets, ensuring your business thrives.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-bezaleel-red hover:bg-gray-100 font-semibold px-8 py-3">
-              Get Free Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bezaleel-red font-semibold px-8 py-3">
-              Compare Countries
-            </Button>
-          </div>
         </div>
       </section>
 
