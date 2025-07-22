@@ -16,7 +16,7 @@ const Footer = () => {
       ]
     },
     {
-      title: "Countries",
+      title: "Supported Countries",
       links: [
         { name: "South Africa", href: "/services/south-africa" },
         { name: "Zambia", href: "/services/zambia" }
