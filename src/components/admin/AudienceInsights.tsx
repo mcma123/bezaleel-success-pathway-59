@@ -3,14 +3,40 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 export const AudienceInsights = () => {
-  // Mock data - in real implementation, this would come from GA4 API
-  const deviceData = [
-    { name: 'Desktop', value: 58.3, color: '#8884d8' },
-    { name: 'Mobile', value: 35.2, color: '#82ca9d' },
-    { name: 'Tablet', value: 6.5, color: '#ffc658' }
-  ];
+  const { deviceData, overviewData, loading } = useAnalytics();
+
+  if (loading) {
+    return (
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Device Usage</CardTitle>
+            <CardDescription>Breakdown of user devices</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="h-[300px] animate-pulse bg-gray-200 rounded"></div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Top Countries</CardTitle>
+            <CardDescription>User distribution by location</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="h-[300px] animate-pulse bg-gray-200 rounded"></div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  const deviceChartData = deviceData.map((device, index) => ({
+    ...device,
+    color: ['#8884d8', '#82ca9d', '#ffc658'][index] || '#8884d8'
+  }));
 
   const locationData = [
     { country: 'South Africa', users: 6240 },
@@ -39,14 +65,14 @@ export const AudienceInsights = () => {
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
-                  data={deviceData}
+                  data={deviceChartData}
                   cx="50%"
                   cy="50%"
                   outerRadius={80}
                   dataKey="value"
-                  label={({ name, value }) => `${name}: ${value}%`}
+                  label={({ name, value }) => `${name}: ${value.toFixed(1)}%`}
                 >
-                  {deviceData.map((entry, index) => (
+                  {deviceChartData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
@@ -85,20 +111,28 @@ export const AudienceInsights = () => {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <div className="text-2xl font-bold text-bezaleel-dark">68.4%</div>
+              <div className="text-2xl font-bold text-bezaleel-dark">
+                {overviewData ? ((overviewData.totalUsers / overviewData.totalSessions) * 100).toFixed(1) : '0'}%
+              </div>
               <div className="text-sm text-muted-foreground">Returning Visitors</div>
             </div>
             <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <div className="text-2xl font-bold text-bezaleel-dark">2.4</div>
+              <div className="text-2xl font-bold text-bezaleel-dark">
+                {overviewData ? (overviewData.totalPageViews / overviewData.totalSessions).toFixed(1) : '0'}
+              </div>
               <div className="text-sm text-muted-foreground">Pages per Session</div>
             </div>
             <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <div className="text-2xl font-bold text-bezaleel-dark">4.2%</div>
-              <div className="text-sm text-muted-foreground">Conversion Rate</div>
+              <div className="text-2xl font-bold text-bezaleel-dark">
+                {overviewData ? (100 - overviewData.bounceRate).toFixed(1) : '0'}%
+              </div>
+              <div className="text-sm text-muted-foreground">Engagement Rate</div>
             </div>
             <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <div className="text-2xl font-bold text-bezaleel-dark">15,234</div>
-              <div className="text-sm text-muted-foreground">Goal Completions</div>
+              <div className="text-2xl font-bold text-bezaleel-dark">
+                {overviewData ? overviewData.totalUsers.toLocaleString() : '0'}
+              </div>
+              <div className="text-sm text-muted-foreground">Total Users</div>
             </div>
           </div>
         </CardContent>

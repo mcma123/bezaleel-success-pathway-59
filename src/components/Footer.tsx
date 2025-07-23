@@ -2,6 +2,12 @@
 import { Building, Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+interface FooterLink {
+  name: string;
+  href: string;
+  disabled?: boolean;
+}
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -9,10 +15,10 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { name: "Company Incorporation", href: "/services/company-incorporation" },
-        { name: "Corporate bank Account Services", href: "/services/banking-finance" },
-        { name: "Compliance Services", href: "/services/business-services" },
-        { name: "Digital Presence", href: "/services/website-development" }
+        { name: "Company Incorporation", href: "#", disabled: true },
+        { name: "Corporate bank Account Services", href: "#", disabled: true },
+        { name: "Compliance Services", href: "#", disabled: true },
+        { name: "Digital Presence", href: "#", disabled: true }
       ]
     },
     {
@@ -66,10 +72,6 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-bezaleel-red flex-shrink-0" />
                 <span className="text-gray-300">+27651522302</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-bezaleel-red flex-shrink-0" />
-                <span className="text-gray-300">Saldanha Bay, CapeTown South Africa</span>
-              </div>
             </div>
           </div>
 
@@ -82,12 +84,18 @@ const Footer = () => {
                   <ul className="space-y-3">
                     {section.links.map((link) => (
                       <li key={link.name}>
-                        <Link
-                          to={link.href}
-                          className="text-gray-300 hover:text-bezaleel-red transition-colors duration-200"
-                        >
-                          {link.name}
-                        </Link>
+                        {link.disabled ? (
+                          <span className="text-gray-300">
+                            {link.name}
+                          </span>
+                        ) : (
+                          <Link
+                            to={link.href}
+                            className="text-gray-300 hover:text-bezaleel-red transition-colors duration-200"
+                          >
+                            {link.name}
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>

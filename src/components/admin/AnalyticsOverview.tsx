@@ -2,42 +2,74 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, MousePointer, Eye, Clock, TrendingUp } from 'lucide-react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 export const AnalyticsOverview = () => {
-  // Mock data - in real implementation, this would come from GA4 API
+  const { overviewData, loading } = useAnalytics();
+
+  if (loading || !overviewData) {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {[...Array(5)].map((_, i) => (
+          <Card key={i} className="animate-pulse">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <div className="h-4 bg-gray-200 rounded w-20"></div>
+              <div className="h-4 w-4 bg-gray-200 rounded"></div>
+            </CardHeader>
+            <CardContent>
+              <div className="h-8 bg-gray-200 rounded w-16 mb-2"></div>
+              <div className="h-3 bg-gray-200 rounded w-24"></div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    );
+  }
+
+  const formatDuration = (ms: number) => {
+    const seconds = Math.floor(ms / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    
+    if (minutes > 0) {
+      return `${minutes}m ${remainingSeconds}s`;
+    }
+    return `${remainingSeconds}s`;
+  };
+
   const metrics = [
     {
       title: "Total Users",
-      value: "12,458",
-      change: "+12.5%",
+      value: overviewData.totalUsers.toLocaleString(),
+      change: overviewData.userGrowth,
       icon: Users,
       trend: "up"
     },
     {
       title: "Sessions",
-      value: "18,942",
-      change: "+8.3%",
+      value: overviewData.totalSessions.toLocaleString(),
+      change: overviewData.sessionGrowth,
       icon: MousePointer,
       trend: "up"
     },
     {
       title: "Page Views",
-      value: "34,576",
-      change: "+15.7%",
+      value: overviewData.totalPageViews.toLocaleString(),
+      change: overviewData.pageViewGrowth,
       icon: Eye,
       trend: "up"
     },
     {
       title: "Bounce Rate",
-      value: "42.3%",
-      change: "-2.1%",
+      value: `${overviewData.bounceRate.toFixed(1)}%`,
+      change: overviewData.bounceRateChange,
       icon: TrendingUp,
       trend: "down"
     },
     {
       title: "Avg. Session",
-      value: "2m 34s",
-      change: "+5.2%",
+      value: formatDuration(overviewData.avgSessionDuration),
+      change: "+5.2%", // This would need historical data to calculate properly
       icon: Clock,
       trend: "up"
     }

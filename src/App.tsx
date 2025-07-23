@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
@@ -31,25 +32,27 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/services/website-development" element={<WebsiteDevelopment />} />
-            <Route path="/services/ecommerce" element={<Ecommerce />} />
-            <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-            <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-            <Route path="/services/south-africa" element={<SouthAfrica />} />
-            <Route path="/services/zambia" element={<Zambia />} />
-            <Route path="/services/business-services" element={<BusinessServices />} />
-            <Route path="/services/company-incorporation" element={<CompanyIncorporation />} />
-            <Route path="/services/banking-finance" element={<BankingFinance />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <WhatsAppButton />
+          <AnalyticsProvider>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+              <Route path="/services/ecommerce" element={<Ecommerce />} />
+              <Route path="/services/mobile-development" element={<MobileDevelopment />} />
+              <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+              <Route path="/services/south-africa" element={<SouthAfrica />} />
+              <Route path="/services/zambia" element={<Zambia />} />
+              <Route path="/services/business-services" element={<BusinessServices />} />
+              <Route path="/services/company-incorporation" element={<CompanyIncorporation />} />
+              <Route path="/services/banking-finance" element={<BankingFinance />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <WhatsAppButton />
+          </AnalyticsProvider>
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>
