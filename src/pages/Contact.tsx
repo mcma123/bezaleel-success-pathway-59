@@ -11,6 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Mail, Phone, Clock, MessageSquare, ExternalLink, Facebook, Instagram, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { useContactForm } from '@/hooks/useContactForm';
+import { toast } from '@/components/ui/use-toast';
 
 const Contact = () => {
   // WhatsApp configuration
@@ -18,8 +20,92 @@ const Contact = () => {
   const whatsappMessage = "Hi! I'd like to get in touch with your team.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
+  // Contact form hook
+  const { isSubmitting, submitStatus, submitForm, resetStatus } = useContactForm();
+
   // FAQ state
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  // Form state
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    company: '',
+    country: '',
+    service: '',
+    message: '',
+    privacyAccepted: false
+  });
+
+  // Handle form input changes
+  const handleInputChange = (field: string, value: string | boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validation
+    if (!formData.fullName || !formData.email || !formData.phone || !formData.service || !formData.message) {
+      toast({
+        title: "Please fill in all required fields",
+        description: "All fields marked with * are required.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    if (!formData.privacyAccepted) {
+      toast({
+        title: "Privacy Policy Agreement Required",
+        description: "Please accept the privacy policy to continue.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Submit form
+    const success = await submitForm({
+      fullName: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      country: formData.country,
+      service: formData.service,
+      message: formData.message
+    });
+
+    if (success) {
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+        variant: "default"
+      });
+      
+      // Reset form
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        company: '',
+        country: '',
+        service: '',
+        message: '',
+        privacyAccepted: false
+      });
+    } else {
+      toast({
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    }
+  };
 
   // FAQ data
   const faqData = [
@@ -138,73 +224,120 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="text-2xl text-center">Contact Form</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="fullName">Full Name *</Label>
-                    <Input id="fullName" placeholder="Enter your full name" required />
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="fullName">Full Name *</Label>
+                      <Input 
+                        id="fullName" 
+                        value={formData.fullName}
+                        onChange={(e) => handleInputChange('fullName', e.target.value)}
+                        placeholder="Enter your full name" 
+                        required 
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        placeholder="Enter your email address" 
+                        required 
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address *</Label>
-                    <Input id="email" type="email" placeholder="Enter your email address" required />
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input 
+                        id="phone" 
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        placeholder="Include country code, e.g., +27..." 
+                        required 
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="company">Company Name (Optional)</Label>
+                      <Input 
+                        id="company" 
+                        value={formData.company}
+                        onChange={(e) => handleInputChange('company', e.target.value)}
+                        placeholder="Enter your company name" 
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number *</Label>
-                    <Input id="phone" placeholder="Include country code, e.g., +27..." required />
+                    <Label htmlFor="country">Country of Origin/Residence (Optional)</Label>
+                    <Input 
+                      id="country" 
+                      value={formData.country}
+                      onChange={(e) => handleInputChange('country', e.target.value)}
+                      placeholder="Enter your country" 
+                    />
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company Name (Optional)</Label>
-                    <Input id="company" placeholder="Enter your company name" />
+                    <Label htmlFor="service">How can we help you? *</Label>
+                    <Select 
+                      value={formData.service} 
+                      onValueChange={(value) => handleInputChange('service', value)}
+                      required
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a service" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="company-registration">Company Registration</SelectItem>
+                        <SelectItem value="bank-account">Bank Account Opening</SelectItem>
+                        <SelectItem value="consultation">Consultation</SelectItem>
+                        <SelectItem value="other">Other (please specify in message)</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="country">Country of Origin/Residence (Optional)</Label>
-                  <Input id="country" placeholder="Enter your country" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Your Message *</Label>
+                    <Textarea 
+                      id="message" 
+                      value={formData.message}
+                      onChange={(e) => handleInputChange('message', e.target.value)}
+                      placeholder="Please tell us how we can help you..." 
+                      className="min-h-[120px]"
+                      required 
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="service">How can we help you? *</Label>
-                  <Select required>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="company-registration">Company Registration</SelectItem>
-                      <SelectItem value="bank-account">Bank Account Opening</SelectItem>
-                      <SelectItem value="consultation">Consultation</SelectItem>
-                      <SelectItem value="other">Other (please specify in message)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div className="flex items-center space-x-2">
+                    <Checkbox 
+                      id="privacy" 
+                      checked={formData.privacyAccepted}
+                      onCheckedChange={(checked) => handleInputChange('privacyAccepted', checked as boolean)}
+                      required 
+                    />
+                    <Label htmlFor="privacy" className="text-sm">
+                      I agree to the{' '}
+                      <a href="#" className="text-primary hover:underline">
+                        Privacy Policy
+                      </a>
+                      *
+                    </Label>
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Your Message *</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Please tell us how we can help you..." 
-                    className="min-h-[120px]"
-                    required 
-                  />
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <Checkbox id="privacy" required />
-                  <Label htmlFor="privacy" className="text-sm">
-                    I agree to the{' '}
-                    <a href="#" className="text-primary hover:underline">
-                      Privacy Policy
-                    </a>
-                    *
-                  </Label>
-                </div>
-
-                <Button size="lg" className="w-full bg-primary hover:bg-primary/90">
-                  Submit
-                </Button>
+                  <Button 
+                    type="submit"
+                    size="lg" 
+                    className="w-full bg-primary hover:bg-primary/90"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Submit'}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>
