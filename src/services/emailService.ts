@@ -11,26 +11,38 @@ export interface ContactFormData {
 
 export const sendContactEmail = async (formData: ContactFormData): Promise<boolean> => {
   try {
-    // Method 1: Using Formspree (Recommended for production)
-    const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID'; // Replace with your Formspree form ID
-    
-    // Method 2: Using a simple mailto link as fallback
-    const subject = `Contact Form Submission from ${formData.fullName}`;
-    const body = `
-Name: ${formData.fullName}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Company: ${formData.company || 'Not provided'}
-Country: ${formData.country || 'Not provided'}
-Service: ${formData.service}
-
-Message:
-${formData.message}
-    `.trim();
-
-    // For development/demo, we'll use a combination approach
+    // Method 1: Try Vercel serverless function first (most reliable)
     try {
-      // Attempt to use Formspree or similar service
+      // Use relative path for Vercel deployment, localhost for development
+      const apiUrl = import.meta.env.VITE_API_URL || (
+        window.location.hostname === 'localhost' 
+          ? 'http://localhost:3001/api' 
+          : '/api'
+      );
+      const response = await fetch(`${apiUrl}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Email sent successfully via Vercel serverless function:', result.messageId);
+        return true;
+      } else {
+        const errorData = await response.json();
+        console.log('Vercel email service failed:', errorData.error);
+      }
+    } catch (error) {
+      console.log('Vercel serverless function failed, trying Formspree fallback:', error.message);
+    }
+
+    // Method 2: Fallback to Formspree service
+    const subject = `Contact Form Submission from ${formData.fullName}`;
+    
+    try {
       const response = await fetch('https://formspree.io/f/mpwaoewj', {
         method: 'POST',
         headers: {
@@ -50,14 +62,26 @@ ${formData.message}
       });
 
       if (response.ok) {
-        console.log('Email sent successfully via Formspree');
+        console.log('Email sent successfully via Formspree fallback');
         return true;
       }
     } catch (error) {
-      console.log('Formspree failed, using mailto fallback');
+      console.log('Formspree also failed, using mailto fallback');
     }
 
-    // Fallback: Open mailto link
+    // Method 3: Final fallback - mailto link
+    const body = `
+Name: ${formData.fullName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Company: ${formData.company || 'Not provided'}
+Country: ${formData.country || 'Not provided'}
+Service: ${formData.service}
+
+Message:
+${formData.message}
+    `.trim();
+
     const mailtoLink = `mailto:enquiries@bezaleelconsultants.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open user's email client
@@ -68,7 +92,7 @@ ${formData.message}
     // Simulate successful sending for UI feedback
     await new Promise(resolve => setTimeout(resolve, 500));
     
-    console.log('Contact form submission processed:', {
+    console.log('Contact form submission processed via mailto fallback:', {
       to: 'enquiries@bezaleelconsultants.co.za',
       from: formData.email,
       subject,
