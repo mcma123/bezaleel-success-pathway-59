@@ -40,6 +40,12 @@ const CountryServices = () => {
   const consultationMessage = "Hello! I'd like to schedule a consultation for business setup services.";
   const requestWhatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(requestMessage)}`;
   const consultationWhatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(consultationMessage)}`;
+  
+  // Country-specific WhatsApp messages
+  const getCountryWhatsAppUrl = (countryName: string) => {
+    const message = `Hello! I'm interested in getting started with business setup services in ${countryName}. Can you help me with the process?`;
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  };
 
   return (
     <section className="py-12 bg-white">
@@ -114,14 +120,16 @@ const CountryServices = () => {
               <CardContent className="space-y-6">
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link 
-                    to={country.name === "South Africa" ? "/services/south-africa" : "/services/zambia"}
+                  <a 
+                    href={getCountryWhatsAppUrl(country.name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1"
                   >
                     <Button className="w-full bezaleel-gradient text-white hover:scale-105 transition-transform duration-300">
                       Get Started
                     </Button>
-                  </Link>
+                  </a>
                   <Link 
                     to={country.name === "South Africa" ? "/services/south-africa" : "/services/zambia"}
                     className="flex-1"

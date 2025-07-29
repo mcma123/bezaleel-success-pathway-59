@@ -45,44 +45,31 @@ const ServicesOverview = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => {
-            const ServiceCard = (
-              <Card 
-                key={service.title} 
-                className="group hover-lift border-2 border-transparent hover:border-bezaleel-red/20 transition-all duration-300 overflow-hidden cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto w-full h-32 rounded-lg overflow-hidden mb-4 group-hover:scale-105 transition-transform duration-300">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-bezaleel-red transition-colors duration-300">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground text-sm leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            );
-
-            // Wrap cards with Link except for Digital Presence which has no link
-            if (service.link !== "#") {
-              return (
-                <Link key={service.title} to={service.link}>
-                  {ServiceCard}
-                </Link>
-              );
-            }
-
-            return ServiceCard;
-          })}
+          {services.map((service, index) => (
+            <Card 
+              key={service.title} 
+              className="group hover-lift border-2 border-transparent hover:border-bezaleel-red/20 transition-all duration-300 overflow-hidden"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-full h-32 rounded-lg overflow-hidden mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardTitle className="text-xl font-bold text-bezaleel-dark group-hover:text-bezaleel-red transition-colors duration-300">
+                  {service.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground text-sm leading-relaxed">
+                  {service.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Bottom CTA */}
