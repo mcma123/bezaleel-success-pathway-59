@@ -208,10 +208,7 @@ const Zambia = () => {
       question: "How long does it take to register a company in Zambia?",
       answer: "The core registration process takes 1-3 business days with PACRA. For complete setup including tax registration and bank account opening, the entire process typically ranges from 1 to 2 weeks with Bezaleel Consultants' assistance."
     },
-    {
-      question: "What is the minimum number of directors and shareholders required?",
-      answer: "A minimum of two directors and two shareholders are required for a Private Limited Company. At least one director must be resident in Zambia. Shareholders can be of any nationality with no residency requirements."
-    },
+    
     {
       question: "Is tax registration required for all businesses?",
       answer: "Yes, Tax Identification Number (TPIN) registration is mandatory for all businesses in Zambia. It's essential for opening bank accounts, obtaining tax clearances, filing returns, and participating in government tenders."
