@@ -449,70 +449,7 @@ const Zambia = () => {
 
           <div className="max-w-6xl mx-auto">
             <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-bezaleel-dark mb-4 flex items-center">
-                  <Zap className="w-8 h-8 text-blue-600 mr-3" />
-                  How Bezaleel Consultants Ensures a Seamless Bank Account Opening:
-                </CardTitle>
-              </CardHeader>
               
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
-                      <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Strategic Bank Liaison</h5>
-                        <p className="text-sm text-muted-foreground">
-                          Primary point of contact with our partner bank in Zambia, leveraging established relationships.
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
-                      <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Expert Document Preparation & Vetting</h5>
-                        <p className="text-sm text-muted-foreground">
-                          Precise guidance, meticulous preparation, and compliance with Zambian banking regulations to minimize delays and rejections.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
-                      <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Navigating Complex KYC</h5>
-                        <p className="text-sm text-muted-foreground">
-                          Simplifying "Know Your Customer" and Anti-Money Laundering processes, ensuring effortless compliance.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
-                      <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Proactive Application Facilitation</h5>
-                        <p className="text-sm text-muted-foreground">
-                          Diligent follow-up and active navigation of bank queries, keeping the process moving forward.
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1" />
-                      <div>
-                        <h5 className="font-semibold text-bezaleel-dark">Remote Process</h5>
-                        <p className="text-sm text-muted-foreground">
-                          We handle the entire application process remotely, saving you time and hassle.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
             </Card>
           </div>
         </div>

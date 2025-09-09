@@ -16,8 +16,7 @@ const CountryServices = () => {
         companyRegistration: "7 days",
         bankAccount: "3 days",
         localDirector: "No",
-        travelRequired: "No"
-      },
+        },
       color: "from-green-500 to-yellow-500"
     },
     {
@@ -27,8 +26,7 @@ const CountryServices = () => {
       details: {
         companyRegistration: "7 days",
         bankAccount: "3 days",
-        localDirector: "No",
-        travelRequired: "No"
+        localDirector: "No"
       },
       color: "from-blue-500 to-green-500"
     }
@@ -108,10 +106,6 @@ const CountryServices = () => {
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                       <span className="text-sm font-medium text-bezaleel-dark">Local Director?</span>
                       <span className="text-sm font-bold text-bezaleel-red">{country.details.localDirector}</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-sm font-medium text-bezaleel-dark">Travel Required?</span>
-                      <span className="text-sm font-bold text-bezaleel-red">{country.details.travelRequired}</span>
                     </div>
                   </div>
                 </div>
